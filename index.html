@@ -1041,27 +1041,8 @@
   @media (max-width:900px){ .enquire .grid{ grid-template-columns:1fr; gap:2.5rem; } }
   .enquire h2{ font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin:0.6rem 0 1.1rem; }
   .enquire-copy p{ color:#3c4a51; font-weight:300; max-width:44ch; margin-bottom:1rem; font-size:1.02rem; }
-  .enquiry-form{ background:var(--off-white); border:1px solid var(--line); padding:2.3rem 2rem; }
-  .enquiry-row{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; margin-bottom:1.15rem; }
-  @media (max-width:560px){ .enquiry-row{ grid-template-columns:1fr; } }
-  .enquiry-field{ display:flex; flex-direction:column; gap:0.4rem; }
-  .enquiry-field label{
-    font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.06em;
-    text-transform:uppercase; color:var(--slate-deep); opacity:0.65;
-  }
-  .enquiry-field input, .enquiry-field select, .enquiry-field textarea{
-    font-family:'Public Sans', sans-serif; font-size:0.95rem; font-weight:400;
-    border:1px solid rgba(37,51,58,0.2); background:var(--off-white);
-    padding:0.68rem 0.8rem; color:var(--slate-deep);
-  }
-  .enquiry-field input:focus-visible, .enquiry-field select:focus-visible, .enquiry-field textarea:focus-visible{
-    outline:2px solid var(--gold); outline-offset:1px;
-  }
-  .enquiry-interests{ display:grid; grid-template-columns:1fr 1fr; gap:0.55rem 1rem; margin:0.2rem 0 1.4rem; }
-  @media (max-width:560px){ .enquiry-interests{ grid-template-columns:1fr; } }
-  .enquiry-check{ display:flex; align-items:center; gap:0.55rem; font-size:0.87rem; font-weight:300; }
-  .enquiry-check input{ accent-color:var(--amber); width:16px; height:16px; }
-  .enquiry-form .btn{ width:100%; justify-content:center; border:none; cursor:pointer; }
+  .enquiry-form{ background:var(--off-white); border:1px solid var(--line); padding:0.9rem; }
+  .enquiry-form iframe{ display:block; width:100%; border:0; background:var(--off-white); }
 
   @media (max-width:760px){
     .module-card{ padding:1.35rem 1.25rem; gap:0.55rem; border-radius:10px; }
@@ -1492,51 +1473,9 @@
       <h2>Tell us about the trip you want.</h2>
       <p>A few details is all we need to start drafting a route. No obligation to book, and no obligation to stay with us either.</p>
     </div>
-    <form class="enquiry-form reveal" id="enquiryForm">
-      <div class="enquiry-row">
-        <div class="enquiry-field"><label for="eq-name">Name</label><input id="eq-name" type="text" placeholder="Full name"></div>
-        <div class="enquiry-field"><label for="eq-email">Email</label><input id="eq-email" type="email" placeholder="you@example.com"></div>
-      </div>
-      <div class="enquiry-row">
-        <div class="enquiry-field"><label for="eq-dates">Dates</label><input id="eq-dates" type="text" placeholder="Fixed dates, or flexible"></div>
-        <div class="enquiry-field"><label for="eq-party">Party size</label><input id="eq-party" type="number" min="1" placeholder="e.g. 6"></div>
-      </div>
-      <div class="enquiry-row">
-        <div class="enquiry-field">
-          <label for="eq-staying">Staying with us?</label>
-          <select id="eq-staying">
-            <option>Yes, at Westfield</option>
-            <option>No, staying elsewhere in the valley</option>
-            <option>Not decided yet</option>
-          </select>
-        </div>
-        <div class="enquiry-field">
-          <label for="eq-pace">Preferred pace</label>
-          <select id="eq-pace">
-            <option>Full-throttle, pack every day</option>
-            <option>A good mix of activity and rest</option>
-            <option>Mostly slow, one or two highlights</option>
-          </select>
-        </div>
-      </div>
-      <div class="enquiry-field" style="margin-bottom:0.6rem;"><label>Interests</label></div>
-      <div class="enquiry-interests">
-        <label class="enquiry-check"><input type="checkbox"> Walking &amp; the fells</label>
-        <label class="enquiry-check"><input type="checkbox"> Cycling &amp; mountain biking</label>
-        <label class="enquiry-check"><input type="checkbox"> Sailing &amp; paddling</label>
-        <label class="enquiry-check"><input type="checkbox"> Water skiing &amp; wakeboarding</label>
-        <label class="enquiry-check"><input type="checkbox"> Climbing &amp; ghyll scrambling</label>
-        <label class="enquiry-check"><input type="checkbox"> Land &amp; speed</label>
-        <label class="enquiry-check"><input type="checkbox"> Wellness &amp; slow living</label>
-        <label class="enquiry-check"><input type="checkbox"> Family &amp; group activities</label>
-      </div>
-      <div class="enquiry-field" style="margin-bottom:1.3rem;">
-        <label for="eq-notes">Anything else we should know</label>
-        <textarea id="eq-notes" rows="3" placeholder="Ages in the group, anything to avoid, a celebration to build around..."></textarea>
-      </div>
-      <button type="submit" class="btn">Send enquiry</button>
-      <p style="font-size:0.78rem; color:#57646b; font-weight:300; margin-top:0.8rem; text-align:center;">Opens your email app with these details filled in, addressed to enquiries@westfieldonullswater.co.uk — just hit send.</p>
-    </form>
+    <div class="enquiry-form reveal">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf_ZBxFKktnwSZTi74w7tUV72IfasmXBU2f80G2DctZawyWmQ/viewform?embedded=true" width="100%" height="1300" frameborder="0" marginheight="0" marginwidth="0" title="Build Your Ideal Trip — Westfield concierge enquiry form" loading="lazy">Loading…</iframe>
+    </div>
   </div>
 </section>
 
@@ -1959,55 +1898,6 @@
         unsubBox.classList.remove('is-submitted');
         unsubForm.reset();
       }, 2200);
-    });
-  }
-
-  // Concierge enquiry form — builds a pre-filled email rather than posting
-  // anywhere, so no server or third-party form service is needed. Opens the
-  // visitor's own email client addressed to the enquiries inbox.
-  const enquiryForm = document.getElementById('enquiryForm');
-  if(enquiryForm){
-    enquiryForm.addEventListener('submit', (e)=>{
-      e.preventDefault();
-
-      const val = (id) => {
-        const el = document.getElementById(id);
-        return el ? el.value.trim() : '';
-      };
-
-      const name = val('eq-name');
-      const email = val('eq-email');
-      const dates = val('eq-dates');
-      const party = val('eq-party');
-      const staying = document.getElementById('eq-staying').value;
-      const pace = document.getElementById('eq-pace').value;
-      const notes = val('eq-notes');
-
-      const interests = Array.from(document.querySelectorAll('.enquiry-interests .enquiry-check'))
-        .filter(label => label.querySelector('input').checked)
-        .map(label => label.textContent.trim());
-
-      const bodyLines = [
-        'New concierge enquiry from staywestfield.uk',
-        '',
-        'Name: ' + (name || '(not given)'),
-        'Email: ' + (email || '(not given)'),
-        'Dates: ' + (dates || '(not given)'),
-        'Party size: ' + (party || '(not given)'),
-        'Staying with us: ' + staying,
-        'Preferred pace: ' + pace,
-        'Interests: ' + (interests.length ? interests.join(', ') : '(none selected)'),
-        '',
-        'Anything else:',
-        (notes || '(nothing added)')
-      ];
-
-      const subject = 'Concierge enquiry' + (name ? ' — ' + name : '');
-      const mailto = 'mailto:enquiries@westfieldonullswater.co.uk'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(bodyLines.join('\r\n'));
-
-      window.location.href = mailto;
     });
   }
 
