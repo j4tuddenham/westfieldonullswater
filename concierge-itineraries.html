@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8DRZLTSFP1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-
-  gtag("config", "G-8DRZLTSFP1");
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#1a2429">
@@ -90,6 +81,25 @@
     text-decoration:none;
   }
   header nav{display:flex; gap:2rem; font-size:0.85rem; flex-wrap:nowrap; white-space:nowrap;}
+
+  /* Experiences dropdown in the header nav — pure CSS, keyboard accessible. */
+  .nav-dropdown{ position:relative; display:flex; align-items:center; }
+  .nav-dropdown-panel{
+    position:absolute; top:100%; left:50%; transform:translateX(-50%) translateY(6px);
+    background:var(--slate-deep); border:1px solid rgba(212,175,55,0.18);
+    border-radius:6px; padding:0.5rem 0; min-width:210px;
+    display:flex; flex-direction:column;
+    opacity:0; visibility:hidden; pointer-events:none;
+    transition:opacity .16s ease, transform .16s ease;
+    box-shadow:0 18px 34px -18px rgba(0,0,0,0.6);
+    z-index:60;
+  }
+  .nav-dropdown-panel a{ padding:0.55rem 1.2rem !important; white-space:nowrap; opacity:0.85; }
+  .nav-dropdown-panel a:hover{ opacity:1; background:rgba(212,175,55,0.08); }
+  .nav-dropdown:hover .nav-dropdown-panel,
+  .nav-dropdown:focus-within .nav-dropdown-panel{
+    opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0);
+  }
   header nav a{color:var(--gold); text-decoration:none; opacity:0.85; transition:opacity .2s; padding:0.3rem 0;}
   header nav a:hover{opacity:1;}
   header nav a:focus-visible, a:focus-visible, button:focus-visible{
@@ -1088,7 +1098,21 @@
   <a href="https://www.staywestfield.uk" class="mark">Westfield</a>
   <div class="header-right">
     <nav id="siteNav">
-      <a href="concierge.html">The Concierge</a>
+      <a href="index.html">The Concierge</a>
+      <div class="nav-dropdown">
+        <a href="index.html#modules" class="nav-dropdown-trigger">Experiences</a>
+        <div class="nav-dropdown-panel">
+          <a href="concierge-fells.html">On the Fells</a>
+          <a href="concierge-cycling.html">On Two Wheels</a>
+          <a href="concierge-water.html">On the Water</a>
+          <a href="concierge-adventure.html">Vertical &amp; Adventure</a>
+          <a href="concierge-land.html">Land &amp; Speed</a>
+          <a href="concierge-wellness.html">Slow &amp; Restorative</a>
+          <a href="concierge-family.html">Family &amp; Groups</a>
+        </div>
+      </div>
+      <a href="concierge-itineraries.html">Itineraries</a>
+      <a href="concierge-network.html">Our Network</a>
       <a href="https://www.staywestfield.uk">Stay Westfield</a>
     </nav>
     <a href="https://wa.me/447554334030?text=Hi%20I%20would%20like%20to%20connect%20regarding%20Westfield%20On%20Ullswater" target="_blank" rel="noopener" class="header-whatsapp" aria-label="Message us on WhatsApp">
@@ -1108,7 +1132,16 @@
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
   </div>
   <nav>
-    <a href="concierge.html">The Concierge</a>
+    <a href="index.html">The Concierge</a>
+    <a href="concierge-fells.html">On the Fells</a>
+    <a href="concierge-cycling.html">On Two Wheels</a>
+    <a href="concierge-water.html">On the Water</a>
+    <a href="concierge-adventure.html">Vertical &amp; Adventure</a>
+    <a href="concierge-land.html">Land &amp; Speed</a>
+    <a href="concierge-wellness.html">Slow &amp; Restorative</a>
+    <a href="concierge-family.html">Family &amp; Groups</a>
+    <a href="concierge-itineraries.html">Itineraries</a>
+    <a href="concierge-network.html">Our Network</a>
     <a href="https://www.staywestfield.uk">Stay Westfield</a>
   </nav>
   <div class="mobile-menu-footer">
@@ -1125,7 +1158,7 @@
   <div class="subhero-scrim"></div>
   <div class="subhero-content" style="display:flex; flex-direction:column; gap:0.4rem;">
     <div class="breadcrumb" style="position:static; padding:0 0 1rem;">
-      <a href="concierge.html">Home</a><span>/</span><span aria-current="page">Showcase Itineraries</span>
+      <a href="index.html">Home</a><span>/</span><span aria-current="page">Showcase Itineraries</span>
     </div>
     <div class="eyebrow">Showcase Itineraries</div>
     <h1>Four weeks we've already put together, day by day.</h1>
@@ -1259,7 +1292,7 @@
     <div class="eyebrow" style="justify-content:center;">Start from one of these</div>
     <h2>Or tell us what you'd actually change about it.</h2>
     <p>Every itinerary here is a starting point, not a fixed package. Swap a day, extend the stay, or use it purely as a sense of what's possible before building your own from scratch.</p>
-    <a href="concierge.html#enquire" class="btn">Start planning your version →</a>
+    <a href="index.html#enquire" class="btn">Start planning your version →</a>
   </div>
 </section>
 
@@ -1283,7 +1316,7 @@
         <h3>Multi-Generational Trips</h3>
         <p>Junior adventure days, milestones and corporate away-days.</p>
       </a>
-      <a href="concierge.html#modules" class="explore-card">
+      <a href="index.html#modules" class="explore-card">
         <div class="eyebrow">Every option</div>
         <h3>All the Modules</h3>
         <p>The full set of activity modules these itineraries are built from.</p>
@@ -1295,7 +1328,16 @@
 <footer id="siteFooter">
   <nav class="footer-sitemap" aria-label="Site pages">
     <div class="wrap">
-      <a href="concierge.html">The Concierge</a>
+      <a href="index.html">The Concierge</a>
+      <a href="concierge-fells.html">On the Fells</a>
+      <a href="concierge-cycling.html">On Two Wheels</a>
+      <a href="concierge-water.html">On the Water</a>
+      <a href="concierge-adventure.html">Vertical &amp; Adventure</a>
+      <a href="concierge-land.html">Land &amp; Speed</a>
+      <a href="concierge-wellness.html">Slow &amp; Restorative</a>
+      <a href="concierge-family.html">Family &amp; Groups</a>
+      <a href="concierge-itineraries.html">Itineraries</a>
+      <a href="concierge-network.html">Our Network</a>
       <a href="https://www.staywestfield.uk">Stay Westfield</a>
     </div>
   </nav>
@@ -1400,6 +1442,7 @@
     window.gtag = gtag;
     gtag('js', new Date());
     gtag('config', 'G-RP1K0VXQ7T');
+    gtag('config', 'G-8DRZLTSFP1');
   }
 
   const cookieBanner = document.getElementById('cookieBanner');
