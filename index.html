@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a2429">
+<title>The Concierge — Curated Lake District Experiences | Westfield on Ullswater</title>
+<meta name="description" content="Westfield's concierge service builds your Lake District week — walking, mountain biking, sailing, water skiing, climbing and more, arranged around your stay at Westfield or anywhere else on Ullswater.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.staywestfield.uk/concierge.html">
+<meta property="og:title" content="The Concierge — Curated Lake District Experiences | Westfield on Ullswater">
+<meta property="og:description" content="Walking, mountain biking, sailing, water skiing, climbing and more — built into your week on Ullswater by Westfield's concierge.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.staywestfield.uk/concierge.html">
+<meta property="og:image" content="https://www.staywestfield.uk/images/ullswater_panoramic.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --slate:#25333a;
+    --slate-deep:#1a2429;
+    --lake:#4e7a8c;
+    --moss:#5f6f47;
+    --stone:#efe9dc;
+    --amber:#bd7a3c;
+    --gold:#cba135;
+    --off-white:#faf8f3;
+    --line: rgba(37,51,58,0.14);
+    --max: 1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html, body{max-width:100%; overflow-x:hidden;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--off-white);
+    color:var(--slate-deep);
+    font-family:'Public Sans', sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  a{color:inherit;}
+  img{display:block; width:100%; height:100%; object-fit:cover;}
+  h1,h2,h3{font-family:'Fraunces', serif; font-weight:500; letter-spacing:-0.01em; line-height:1.08;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--amber);
+    display:flex;
+    align-items:center;
+    gap:0.6em;
+  }
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--amber); display:inline-block;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 6vw;}
+
+  .contours{position:absolute; inset:0; pointer-events:none; opacity:0.5;}
+  .contours svg{width:100%; height:100%;}
+
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:1.2rem 6vw;
+    background:var(--slate-deep);
+    border-bottom:1px solid rgba(212,175,55,0.18);
+    box-shadow:0 8px 24px -18px rgba(0,0,0,0.6);
+  }
+  header .mark{
+    font-family:'Fraunces', serif; font-weight:500; font-size:1.6rem; letter-spacing:0.04em;
+    color:var(--gold);
+    line-height:1;
+    text-decoration:none;
+  }
+  header nav{display:flex; gap:2rem; font-size:0.85rem; flex-wrap:nowrap; white-space:nowrap;}
+  header nav a{color:var(--gold); text-decoration:none; opacity:0.85; transition:opacity .2s; padding:0.3rem 0;}
+  header nav a:hover{opacity:1;}
+  header nav a:focus-visible, a:focus-visible, button:focus-visible{
+    outline:2px solid var(--gold); outline-offset:3px;
+  }
+  @media (max-width:1000px) and (min-width:861px){ header nav{gap:1.2rem; font-size:0.78rem;} }
+  @media (max-width:860px){ header nav{display:none;} }
+  .menu-trigger{
+    display:none; background:none; border:none; cursor:pointer;
+    color:var(--gold); font-family:'IBM Plex Mono', monospace;
+    font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase;
+    padding:0.5rem 0.2rem;
+  }
+  @media (max-width:860px){ .menu-trigger{display:inline-block;} }
+
+  .mobile-menu{
+    position:fixed; inset:0; z-index:95;
+    background:var(--slate-deep);
+    display:none;
+    flex-direction:column;
+    padding:1.2rem 6vw 2rem;
+  }
+  .mobile-menu.is-open{display:flex;}
+  .mobile-menu-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:2.5rem;}
+  .mobile-menu-close{
+    background:none; border:none; cursor:pointer; color:var(--gold);
+    font-size:2rem; line-height:1; padding:0.3rem;
+  }
+  .mobile-menu nav{display:flex; flex-direction:column; gap:0.4rem;}
+  .mobile-menu nav a{
+    color:var(--stone); text-decoration:none;
+    font-family:'Fraunces', serif; font-size:1.7rem; font-weight:400;
+    padding:0.7rem 0; border-bottom:1px solid rgba(239,233,220,0.1);
+  }
+  .mobile-menu-footer{
+    margin-top:auto; display:flex; flex-direction:column; gap:1rem;
+    padding-top:2rem;
+  }
+  .mobile-menu-footer a{
+    color:var(--gold); text-decoration:none;
+    font-family:'IBM Plex Mono', monospace; font-size:0.85rem; letter-spacing:0.04em;
+  }
+  .header-right{display:flex; align-items:center; gap:1.4rem;}
+  .header-whatsapp{
+    display:inline-flex; align-items:center; justify-content:center; gap:0.5rem;
+    color:var(--gold); opacity:0.85; transition:opacity .2s ease;
+  }
+  .header-whatsapp:hover{opacity:1;}
+  .header-whatsapp-label{
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem;
+    letter-spacing:0.04em;
+  }
+
+  .hero{
+    position:relative;
+    height:100svh;
+    min-height:560px;
+    overflow:hidden;
+    color:#fff;
+    display:flex;
+    align-items:flex-end;
+  }
+  .hero-media{position:absolute; inset:0; z-index:0; overflow:hidden; background:#efeee9;}
+  .hero-img{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover;
+    filter:saturate(0.95) brightness(0.8);
+    transform:scale(1);
+    opacity:0;
+    transition:opacity 3.8s ease;
+  }
+  .hero-img-a{opacity:1; z-index:1; transform:scale(1);}
+  .hero-img-a.is-fading{opacity:0;}
+  .hero-img-b{z-index:2;}
+  .hero-img-b.is-visible{opacity:1;}
+  .hero-img.is-zooming{animation:heroZoom 7.5s ease-out forwards;}
+  .hero-img-a.is-zooming{animation:heroZoomLogo 2.2s ease-out forwards;}
+  @keyframes heroZoom{ from{transform:scale(1);} to{transform:scale(1.3);} }
+  @keyframes heroZoomLogo{ from{transform:scale(1);} to{transform:scale(1.15);} }
+  .hero-scrim{
+    position:absolute; inset:0; z-index:3;
+    background:var(--slate-deep);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .05s linear;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0; z-index:3;
+    background:linear-gradient(180deg, rgba(26,36,41,0.15) 0%, rgba(26,36,41,0.05) 35%, rgba(26,36,41,0.85) 100%);
+  }
+  .hero-content{
+    position:relative; z-index:4; padding:0 6vw 4.5rem; width:100%;
+    opacity:0; transform:translateY(48px);
+    transition:opacity 2.2s ease, transform 2.2s ease;
+  }
+  .hero-content.is-visible{opacity:1; transform:translateY(0);}
+  .hero-content .eyebrow{color:var(--stone); margin-bottom:1.1rem;}
+  .hero-content .eyebrow::before{background:var(--stone);}
+  .hero h1{
+    font-size:clamp(2.6rem, 6.5vw, 5.2rem);
+    max-width:16ch;
+    font-weight:400;
+  }
+  .hero h1 em{font-style:italic; color:var(--stone); font-weight:300;}
+  .hero-sub{
+    max-width:44ch; margin-top:1.2rem; font-size:1.05rem; color:rgba(255,255,255,0.82);
+    font-weight:300;
+  }
+  .hero-facts{
+    display:flex; gap:2.2rem; margin-top:2.4rem; flex-wrap:wrap;
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem; letter-spacing:0.05em;
+    text-transform:uppercase; color:var(--stone);
+  }
+  .hero-facts span strong{display:block; font-family:'Fraunces', serif; font-size:1.5rem; color:#fff; letter-spacing:0; text-transform:none; font-weight:400;}
+
+  .scroll-cue{
+    position:absolute; bottom:1.6rem; right:6vw; z-index:4;
+    writing-mode:vertical-rl; color:rgba(255,255,255,0.6);
+    font-family:'IBM Plex Mono', monospace; font-size:0.7rem; letter-spacing:0.14em;
+    display:flex; align-items:center; gap:0.6rem;
+  }
+  .scroll-cue::after{content:""; width:1px; height:40px; background:rgba(255,255,255,0.4);}
+
+  .highlights{
+    background:var(--slate-deep); color:var(--stone);
+    padding:3.6rem 0; position:relative; overflow:hidden;
+  }
+  .highlights .wrap{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:2.5rem;
+    position:relative; z-index:1;
+  }
+  @media (max-width:820px){ .highlights .wrap{grid-template-columns:1fr;} }
+  .h-item{border-left:1px solid rgba(239,233,220,0.25); padding-left:1.4rem;}
+  .h-item h3{font-size:1.25rem; color:#fff; margin-bottom:0.5rem; font-weight:400;}
+  .h-item p{font-size:0.92rem; color:rgba(239,233,220,0.72); font-weight:300;}
+
+  .about{padding:7rem 0 5rem; position:relative;}
+  .about .grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:5vw; align-items:start;}
+  @media (max-width:900px){ .about .grid{grid-template-columns:1fr; gap:2.5rem;} }
+  .about h2{font-size:clamp(2rem,4vw,3rem); font-weight:400; margin:0.7rem 0 1.6rem;}
+  .about p{color:#3c4a51; max-width:60ch; margin-bottom:1.1rem; font-weight:300; font-size:1.02rem;}
+  .about-figure{position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:2px;}
+  .about-figure .contours{opacity:0.9; mix-blend-mode:soft-light;}
+
+  .divider{position:relative; height:120px; overflow:hidden; background:var(--stone);}
+
+  .rooms{background:var(--stone); padding:5rem 0 6rem;}
+  .rooms-head{display:flex; justify-content:space-between; align-items:flex-end; gap:2rem; margin-bottom:3rem; flex-wrap:wrap;}
+  .rooms-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400;}
+  .room-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:1.4rem;}
+  @media (max-width:860px){ .room-grid{grid-template-columns:1fr;} }
+  .room-card{
+    background:var(--off-white); border:1px solid var(--line); padding:1.9rem 1.7rem;
+    display:flex; flex-direction:column; gap:0.7rem;
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .room-card:hover{transform:translateY(-4px); box-shadow:0 18px 34px -22px rgba(26,36,41,0.35);}
+  .room-num{font-family:'IBM Plex Mono', monospace; font-size:0.75rem; color:var(--amber); letter-spacing:0.08em;}
+  .room-card h3{font-size:1.3rem; font-weight:400;}
+  .room-card p{font-size:0.9rem; color:#57646b; font-weight:300;}
+
+  .gallery{padding:5.5rem 0; background:var(--off-white);}
+  .gallery-head{margin-bottom:2.4rem;}
+  .gallery-title-line{display:flex; align-items:center; gap:0.9rem;}
+  .gallery-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin-top:0.6rem;}
+  .g-grid{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-auto-rows:14vw;
+    gap:0.6rem;
+  }
+  @media (max-width:820px){ .g-grid{grid-template-columns:repeat(2,1fr); grid-auto-rows:38vw;} }
+  .g-item{overflow:hidden; position:relative;}
+  .g-item img{transition:transform .6s ease;}
+  .g-item:hover img{transform:scale(1.06);}
+  .g-item.a{grid-column:span 4; grid-row:span 2;}
+  .g-item.b{grid-column:span 2; grid-row:span 1;}
+  .g-item.c{grid-column:span 2; grid-row:span 1;}
+  .g-item.d{grid-column:span 3; grid-row:span 1;}
+  .g-item.d img{object-fit:contain; background:var(--slate-deep);}
+  .g-item.e{grid-column:span 3; grid-row:span 1;}
+  @media (max-width:820px){ .g-item.a,.g-item.b,.g-item.c,.g-item.d,.g-item.e{grid-column:span 1; grid-row:span 1;} }
+
+  .amenities{background:var(--slate); color:var(--stone); padding:6rem 0;}
+  .amenities .wrap > .eyebrow{color:var(--stone);}
+  .amenities .wrap > .eyebrow::before{background:var(--stone);}
+  .amenities h2{font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin:0.6rem 0 3rem; max-width:16ch;}
+  .amen-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+    border-top:1px solid rgba(239,233,220,0.18);
+    border-left:1px solid rgba(239,233,220,0.18);
+  }
+  @media (max-width:820px){ .amen-grid{grid-template-columns:repeat(2,1fr);} }
+  .amen-item{
+    padding:1.4rem 1.4rem 1.4rem 0;
+    border-bottom:1px solid rgba(239,233,220,0.18);
+    border-right:1px solid rgba(239,233,220,0.18);
+    padding-left:1.4rem;
+    font-size:0.95rem; font-weight:300;
+    display:flex; align-items:center; min-height:76px;
+  }
+
+  .setting{padding:6.5rem 0; position:relative; overflow:hidden;}
+  .setting .grid{display:grid; grid-template-columns:1fr 1fr; gap:4vw; align-items:center;}
+  @media (max-width:900px){ .setting .grid{grid-template-columns:1fr;} }
+  .setting h2{font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin:0.7rem 0 1.4rem;}
+  .setting p{color:#3c4a51; font-weight:300; margin-bottom:1rem; max-width:52ch;}
+  .setting-figure{aspect-ratio:1/1; position:relative; overflow:hidden;}
+
+  .host{background:var(--stone); padding:5rem 0;}
+  .host .card{
+    display:flex; gap:2rem; align-items:center; background:var(--off-white);
+    border:1px solid var(--line); padding:2.4rem; max-width:720px;
+  }
+  @media (max-width:600px){ .host .card{flex-direction:column; text-align:center;} }
+  .host .photo{width:96px; height:96px; border-radius:50%; overflow:hidden; flex-shrink:0;}
+  .host h3{font-size:1.3rem; font-weight:500; margin-bottom:0.3rem;}
+  .host p{font-size:0.92rem; color:#57646b; font-weight:300;}
+
+  .cta{
+    background:var(--slate-deep); color:#fff; padding:6.5rem 0; text-align:center;
+    position:relative; overflow:hidden;
+  }
+  .cta h2{font-size:clamp(2.2rem,5vw,3.6rem); font-weight:400; max-width:16ch; margin:0.8rem auto 1.6rem;}
+  .cta p{color:rgba(250,248,243,0.72); max-width:42ch; margin:0 auto 2.4rem; font-weight:300;}
+  .btn{
+    display:inline-flex; align-items:center; gap:0.6rem;
+    background:var(--amber); color:#fff; text-decoration:none;
+    padding:1rem 2.1rem; font-family:'IBM Plex Mono', monospace;
+    font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .btn:hover{background:#a8672f; transform:translateY(-2px);}
+
+  .mobile-book-bar{
+    display:none;
+    position:fixed; left:0; right:0; bottom:0; z-index:70;
+    background:var(--slate-deep);
+    border-top:1px solid rgba(212,175,55,0.25);
+    padding:0.8rem 6vw;
+    box-shadow:0 -10px 24px -14px rgba(0,0,0,0.5);
+  }
+  .mobile-book-bar a{
+    display:block; text-align:center;
+    background:var(--amber); color:#fff; text-decoration:none;
+    padding:0.85rem 1rem; font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase;
+  }
+  @media (max-width:640px){
+    .mobile-book-bar{display:block;}
+    body{padding-bottom:4.2rem;}
+  }
+
+  footer{
+    background:var(--slate-deep); color:rgba(250,248,243,0.5);
+    padding:2rem 0 2.5rem; font-size:0.8rem; text-align:center;
+    border-top:1px solid rgba(239,233,220,0.1);
+  }
+  footer a{text-decoration:underline; text-underline-offset:3px;}
+  .footer-inner{
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.9rem;
+    flex-wrap:wrap;
+  }
+  .footer-check-availability{
+    color:var(--gold); text-decoration:underline; text-underline-offset:3px;
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem;
+    letter-spacing:0.06em; text-transform:uppercase;
+  }
+  .footer-social{
+    color:var(--gold); opacity:0.75; text-decoration:none;
+    display:inline-flex; align-items:center; justify-content:center; gap:0.6rem;
+    transition:opacity .2s ease;
+  }
+  .footer-social:hover{opacity:1;}
+  .footer-social-label{
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem;
+    letter-spacing:0.06em; text-transform:uppercase;
+  }
+
+  .privacy-note{
+    background:var(--slate-deep);
+    border-top:1px solid rgba(239,233,220,0.08);
+    padding:1rem 6vw 1.8rem;
+    text-align:center;
+  }
+  .privacy-note p{
+    max-width:640px; margin:0 auto;
+    font-size:0.7rem; line-height:1.6;
+    color:rgba(239,233,220,0.4);
+    font-weight:300;
+  }
+  .privacy-note a{color:rgba(239,233,220,0.55); text-decoration:underline; text-underline-offset:2px;}
+  .privacy-note button.privacy-unsub-trigger{
+    background:none; border:none; padding:0; margin:0; cursor:pointer;
+    font:inherit; color:rgba(239,233,220,0.55);
+    text-decoration:underline; text-underline-offset:2px;
+  }
+  .privacy-note .cookie-settings-trigger{
+    background:none; border:none; padding:0; margin:0; cursor:pointer;
+    font:inherit; color:rgba(239,233,220,0.55);
+    text-decoration:underline; text-underline-offset:2px;
+  }
+
+  .cookie-banner{
+    position:fixed; left:0; right:0; bottom:0; z-index:100;
+    background:var(--slate-deep); color:var(--stone);
+    border-top:1px solid rgba(212,175,55,0.3);
+    box-shadow:0 -16px 40px -20px rgba(0,0,0,0.6);
+    padding:1.2rem 6vw;
+    display:none;
+    align-items:center; justify-content:center; gap:1.4rem;
+    flex-wrap:wrap; text-align:center;
+  }
+  .cookie-banner.is-visible{display:flex;}
+  .cookie-banner p{
+    font-size:0.85rem; font-weight:300; max-width:560px;
+    color:rgba(239,233,220,0.85); margin:0;
+  }
+  .cookie-banner a{color:var(--gold); text-decoration:underline; text-underline-offset:2px;}
+  .cookie-banner-actions{display:flex; gap:0.7rem; flex-wrap:wrap; justify-content:center;}
+  .cookie-banner-actions button{
+    border:none; cursor:pointer; font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase;
+    padding:0.65rem 1.1rem; transition:background .2s ease, opacity .2s ease;
+  }
+  .cookie-accept{background:var(--gold); color:var(--slate-deep);}
+  .cookie-accept:hover{background:#e0b64a;}
+  .cookie-reject{background:transparent; color:var(--stone); border:1px solid rgba(239,233,220,0.35) !important;}
+  .cookie-reject:hover{opacity:0.8;}
+
+  .modal-overlay{
+    position:fixed; inset:0; z-index:90;
+    background:rgba(20,26,29,0.7);
+    display:none; align-items:center; justify-content:center;
+    padding:1.5rem;
+  }
+  .modal-overlay.is-open{display:flex;}
+  .modal-box{
+    position:relative; width:min(360px, 100%);
+    background:var(--slate-deep); color:var(--stone);
+    border:1px solid rgba(212,175,55,0.25);
+    box-shadow:0 25px 60px -20px rgba(0,0,0,0.6);
+    padding:1.9rem 1.7rem 1.7rem;
+  }
+  .modal-close{
+    position:absolute; top:0.7rem; right:0.8rem;
+    background:none; border:none; cursor:pointer;
+    color:var(--stone); opacity:0.7;
+    font-size:1.3rem; line-height:1; padding:0.3rem;
+    transition:opacity .2s ease;
+  }
+  .modal-close:hover{opacity:1;}
+  .modal-box h3{font-size:1.1rem; font-weight:500; margin-bottom:0.5rem; color:#fff;}
+  .modal-box p{font-size:0.85rem; color:rgba(239,233,220,0.75); font-weight:300; margin-bottom:1.1rem;}
+  .modal-form{display:flex; flex-direction:column; gap:0.7rem;}
+  .modal-form input[type="email"]{
+    width:100%; padding:0.7rem 0.9rem;
+    background:var(--off-white); border:1px solid rgba(212,175,55,0.3);
+    color:var(--slate-deep); font-family:'Public Sans', sans-serif; font-size:0.9rem;
+  }
+  .modal-form input[type="email"]:focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+  .modal-form button[type="submit"]{
+    background:var(--gold); color:var(--slate-deep); border:none; cursor:pointer;
+    padding:0.7rem 1rem; font-family:'IBM Plex Mono', monospace; font-size:0.75rem;
+    letter-spacing:0.06em; text-transform:uppercase; transition:background .2s ease;
+  }
+  .modal-form button[type="submit"]:hover{background:#e0b64a;}
+  .modal-success{font-size:0.9rem; color:var(--gold); font-weight:400; display:none;}
+  .modal-box.is-submitted .modal-form{display:none;}
+  .modal-box.is-submitted .modal-success{display:block;}
+
+  .newsletter-box{
+    position:fixed; right:1.5rem; bottom:5.7rem; z-index:80;
+    width:min(320px, calc(100vw - 3rem));
+    background:var(--slate-deep); color:var(--stone);
+    border:1px solid rgba(212,175,55,0.25);
+    box-shadow:0 20px 45px -20px rgba(0,0,0,0.55);
+    padding:1.6rem 1.6rem 1.5rem;
+    opacity:0; transform:translateY(16px) scale(0.98);
+    pointer-events:none;
+    transition:opacity .4s ease, transform .4s ease;
+  }
+  .newsletter-box.is-visible{opacity:1; transform:translateY(0) scale(1); pointer-events:auto;}
+  .newsletter-close{
+    position:absolute; top:0.7rem; right:0.8rem;
+    background:none; border:none; cursor:pointer;
+    color:var(--stone); opacity:0.7;
+    font-size:1.3rem; line-height:1; padding:0.3rem;
+    transition:opacity .2s ease;
+  }
+  .newsletter-close:hover{opacity:1;}
+  .newsletter-box .eyebrow{color:var(--gold); margin-bottom:0.6rem;}
+  .newsletter-box .eyebrow::before{background:var(--gold);}
+  .newsletter-box h3{font-size:1.15rem; font-weight:500; margin-bottom:0.5rem; color:#fff;}
+  .newsletter-box p{font-size:0.85rem; color:rgba(239,233,220,0.75); font-weight:300; margin-bottom:1.1rem;}
+  .newsletter-form{display:flex; flex-direction:column; gap:0.7rem;}
+  .newsletter-form input[type="email"]{
+    width:100%; padding:0.7rem 0.9rem;
+    background:var(--off-white); border:1px solid rgba(212,175,55,0.3);
+    color:var(--slate-deep); font-family:'Public Sans', sans-serif; font-size:0.9rem;
+  }
+  .newsletter-form input[type="email"]:focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+  .newsletter-form button{
+    background:var(--gold); color:var(--slate-deep); border:none; cursor:pointer;
+    padding:0.7rem 1rem; font-family:'IBM Plex Mono', monospace; font-size:0.75rem;
+    letter-spacing:0.06em; text-transform:uppercase; transition:background .2s ease;
+  }
+  .newsletter-form button:hover{background:#e0b64a;}
+  .newsletter-success{font-size:0.9rem; color:var(--gold); font-weight:400; display:none;}
+  .newsletter-box.is-submitted .newsletter-form{display:none;}
+  .newsletter-box.is-submitted .newsletter-success{display:block;}
+  @media (max-width:600px){ .newsletter-box{right:1rem; bottom:5.2rem; left:1rem; width:auto;} }
+
+  .chat-bubble{
+    position:fixed; right:1.5rem; bottom:1.5rem; z-index:78;
+    display:flex; align-items:center; gap:0.7rem;
+    text-decoration:none;
+    opacity:0; transform:translateY(16px) scale(0.95);
+    pointer-events:none;
+    transition:opacity .4s ease, transform .4s ease;
+  }
+  .chat-bubble.is-visible{opacity:1; transform:translateY(0) scale(1); pointer-events:auto;}
+
+  .availability-tab{
+    position:fixed; top:42%; right:0; z-index:82;
+    transform:translateY(-50%);
+    background:var(--gold); color:var(--slate-deep);
+    border:none; cursor:pointer;
+    padding:1rem 0.6rem;
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem;
+    letter-spacing:0.1em; text-transform:uppercase;
+    writing-mode:vertical-rl; text-orientation:mixed;
+    box-shadow:-6px 0 18px -8px rgba(0,0,0,0.4);
+    transition:background .2s ease;
+  }
+  .availability-tab:hover{background:#e0b64a;}
+
+  .availability-backdrop{
+    position:fixed; inset:0; z-index:83;
+    background:rgba(20,26,29,0.55);
+    opacity:0; pointer-events:none;
+    transition:opacity .3s ease;
+  }
+  .availability-backdrop.is-open{opacity:1; pointer-events:auto;}
+
+  .availability-panel{
+    position:fixed; top:0; right:0; bottom:0; z-index:84;
+    width:min(440px, 92vw);
+    background:var(--off-white);
+    box-shadow:-20px 0 50px -20px rgba(0,0,0,0.55);
+    transform:translateX(100%);
+    transition:transform .4s ease;
+    display:flex; flex-direction:column;
+    overflow-y:auto;
+  }
+  .availability-panel.is-open{transform:translateX(0);}
+  .availability-panel-header{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:1.2rem 1.4rem;
+    background:var(--slate-deep); color:#fff;
+    position:sticky; top:0; z-index:1;
+  }
+  .availability-panel-header h3{
+    font-family:'Fraunces', serif; font-size:1.15rem; font-weight:500; color:var(--gold);
+  }
+  .availability-panel-close{
+    background:none; border:none; cursor:pointer; color:var(--stone);
+    font-size:1.6rem; line-height:1; padding:0.2rem 0.5rem;
+  }
+  .availability-panel-body{padding:1.3rem 1.4rem 2rem;}
+  @media (max-width:600px){
+    .availability-tab{padding:0.85rem 0.5rem; font-size:0.72rem;}
+  }
+  .chat-greeting{
+    background:var(--slate-deep); color:var(--stone);
+    border:1px solid rgba(212,175,55,0.3);
+    padding:0.65rem 0.9rem;
+    font-size:0.78rem; line-height:1.4; font-weight:300;
+    max-width:190px;
+    box-shadow:0 14px 30px -14px rgba(0,0,0,0.55);
+  }
+  .chat-avatar-wrap{position:relative; width:60px; height:60px; flex-shrink:0;}
+  .chat-bubble-avatar{
+    position:absolute; inset:0; border-radius:50%; overflow:hidden;
+    border:2px solid var(--gold);
+    background:var(--slate-deep);
+  }
+  .chat-bubble-avatar img{width:100%; height:100%; object-fit:cover;}
+  .chat-bubble-badge{
+    position:absolute; bottom:-3px; right:-3px;
+    width:24px; height:24px; border-radius:50%;
+    background:var(--gold); color:var(--slate-deep);
+    display:flex; align-items:center; justify-content:center;
+    border:2px solid var(--slate-deep);
+  }
+  @media (max-width:600px){
+    .chat-bubble{right:1rem; bottom:1rem;}
+    .chat-greeting{max-width:150px; font-size:0.72rem; padding:0.55rem 0.75rem;}
+  }
+  @media (max-width:640px){
+    .chat-bubble{bottom:4.6rem;}
+    .newsletter-box{bottom:8.8rem;}
+  }
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ============================================================
+     RESPONSIVE MOBILE LAYOUT
+     Optimised for phones from 320px through 760px.
+     ============================================================ */
+  @media (max-width:760px){
+    html{font-size:100%;}
+    body{
+      background:#e6dfcd;
+      overflow-x:hidden;
+      padding-bottom:4.8rem;
+    }
+
+    header{
+      padding:0.85rem 5vw;
+      min-height:58px;
+    }
+    header .mark{font-size:1.35rem;}
+    .header-right{gap:0.9rem;}
+    .header-whatsapp{gap:0;}
+    .header-whatsapp-label{display:none;}
+    .header-whatsapp svg{width:21px;height:21px;}
+    .menu-trigger{font-size:0.72rem;padding:0.55rem 0.1rem;}
+
+    .mobile-menu{
+      padding:1rem 7vw 1.5rem;
+      overflow-y:auto;
+    }
+    .mobile-menu-top{margin-bottom:1.4rem;}
+    .mobile-menu nav{gap:0;}
+    .mobile-menu nav a{
+      font-size:1.45rem;
+      padding:0.62rem 0;
+    }
+    .mobile-menu-footer{gap:0.8rem;padding-top:1.5rem;}
+    .mobile-menu-footer a{font-size:0.75rem;}
+
+    .hero{
+      height:82svh;
+      min-height:560px;
+      max-height:760px;
+    }
+    .hero-content{
+      padding:0 7vw 3.2rem;
+    }
+    .hero-content .eyebrow{
+      font-size:0.62rem;
+      letter-spacing:0.12em;
+      margin-bottom:0.8rem;
+    }
+    .hero-content .eyebrow::before{width:16px;}
+    .hero h1{
+      font-size:clamp(2.25rem,10.5vw,3.55rem);
+      line-height:1.03;
+      max-width:14ch;
+    }
+    .hero-sub{
+      margin-top:1rem;
+      font-size:0.92rem;
+      line-height:1.5;
+      max-width:42ch;
+    }
+    .hero-facts{
+      gap:1rem 1.25rem;
+      margin-top:1.6rem;
+      font-size:0.63rem;
+    }
+    .hero-facts span{min-width:58px;}
+    .hero-facts span strong{font-size:1.3rem;}
+    .scroll-cue{display:none;}
+
+    .highlights, .about, .rooms, .gallery, .amenities, .setting, .host, .cta{
+      margin:0 0.65rem 0.9rem;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 14px 30px -22px rgba(26,36,41,0.45);
+    }
+    .highlights{margin-top:0.9rem;padding:2.4rem 0;}
+    .highlights .wrap{gap:1.8rem;}
+    .h-item{padding-left:1rem;}
+    .h-item h3{font-size:1.12rem;}
+    .h-item p{font-size:0.86rem;line-height:1.55;}
+
+    .wrap{
+      width:100%;
+      max-width:none;
+      padding:0 6.5vw;
+    }
+    .about{padding:3.2rem 0 3rem;}
+    .about .grid{gap:2rem;}
+    .about h2{
+      font-size:clamp(1.85rem,8vw,2.35rem);
+      line-height:1.08;
+      margin:0.55rem 0 1.15rem;
+    }
+    .about p{font-size:0.94rem;line-height:1.62;margin-bottom:0.9rem;}
+    .about-figure{aspect-ratio:4/3;border-radius:10px;}
+
+    .rooms{padding:3.2rem 0 3.4rem;}
+    .rooms-head{margin-bottom:1.8rem;gap:1rem;}
+    .rooms-head h2{
+      font-size:clamp(1.8rem,7.5vw,2.3rem);
+      line-height:1.08;
+    }
+    .room-grid{grid-template-columns:1fr;gap:0.8rem;}
+    .room-card{
+      padding:1.35rem 1.25rem;
+      gap:0.55rem;
+      border-radius:10px;
+    }
+    .room-num{font-size:0.67rem;}
+    .room-card h3{font-size:1.18rem;}
+    .room-card p{font-size:0.86rem;line-height:1.55;}
+
+    .gallery{padding:3.2rem 0 3.4rem;}
+    .gallery-head{margin-bottom:1.5rem;}
+    .gallery-title-row{display:block;}
+    .gallery-title-line{gap:0.65rem;}
+    .gallery-head h2{
+      font-size:clamp(1.85rem,7.5vw,2.3rem);
+      margin-top:0.45rem;
+    }
+    .g-grid{
+      grid-template-columns:1fr;
+      grid-auto-rows:auto;
+      gap:0.65rem;
+    }
+    .g-item.a,.g-item.b,.g-item.c,.g-item.d,.g-item.e{
+      grid-column:span 1;
+      grid-row:span 1;
+      aspect-ratio:4/3;
+    }
+    .g-item.a{aspect-ratio:16/10;}
+    .g-item.d img{object-fit:cover;}
+
+    .amenities{padding:3.4rem 0;}
+    .amenities h2{
+      font-size:clamp(1.8rem,7.5vw,2.3rem);
+      margin:0.55rem 0 1.8rem;
+      line-height:1.08;
+    }
+    .amen-grid{grid-template-columns:1fr;}
+    .amen-item{
+      min-height:58px;
+      padding:0.85rem 1rem;
+      font-size:0.88rem;
+    }
+
+    .setting{padding:3.4rem 0;}
+    .setting .grid{gap:1.8rem;}
+    .setting-figure{aspect-ratio:4/3;border-radius:10px;}
+    .setting h2{
+      font-size:clamp(1.8rem,7.5vw,2.3rem);
+      margin:0.55rem 0 1rem;
+    }
+    .setting p{font-size:0.94rem;line-height:1.6;}
+
+    .host{padding:3.2rem 0;}
+    .host .card{
+      padding:1.6rem 1.3rem;
+      gap:1rem;
+      border-radius:10px;
+    }
+    .host .photo{width:84px;height:84px;}
+    .host h3{font-size:1.2rem;}
+    .host p{font-size:0.86rem;line-height:1.55;}
+
+    .cta{padding:3.8rem 0 4rem;}
+    .cta .eyebrow{font-size:0.61rem;}
+    .cta h2{
+      font-size:clamp(2rem,9vw,2.8rem);
+      line-height:1.05;
+      margin:0.65rem auto 1.15rem;
+    }
+    .cta p{font-size:0.9rem;line-height:1.55;margin-bottom:1.6rem;}
+    .btn{
+      width:100%;
+      justify-content:center;
+      padding:0.95rem 1rem;
+      font-size:0.72rem;
+    }
+
+    footer{padding:1.7rem 0 2rem;font-size:0.72rem;}
+    .footer-inner{gap:0.8rem;}
+    .footer-inner span{line-height:1.6;}
+    .footer-social-label{font-size:0.66rem;}
+    .privacy-note{padding:0.9rem 6vw 1.5rem;}
+    .privacy-note p{font-size:0.64rem;}
+
+    .newsletter-box{
+      left:0.75rem;
+      right:0.75rem;
+      bottom:5.25rem;
+      width:auto;
+      padding:1.25rem 1.2rem 1.15rem;
+    }
+    .newsletter-box h3{font-size:1.05rem;}
+    .newsletter-box p{font-size:0.78rem;margin-bottom:0.9rem;}
+    .newsletter-form{gap:0.55rem;}
+
+    .chat-bubble{
+      right:0.8rem;
+      bottom:4.9rem;
+    }
+    .chat-greeting{
+      max-width:145px;
+      font-size:0.68rem;
+      padding:0.5rem 0.65rem;
+    }
+    .chat-avatar-wrap{width:54px;height:54px;}
+    .chat-bubble-badge{width:22px;height:22px;}
+
+    .reveal{
+      transform:translateY(28px);
+      transition:opacity .7s ease, transform .7s ease;
+    }
+    .reveal.in{transform:translateY(0);}
+  }
+
+  @media (max-width:390px){
+    .hero{height:84svh;min-height:540px;}
+    .hero-content{padding-left:6.5vw;padding-right:6.5vw;padding-bottom:2.7rem;}
+    .hero h1{font-size:clamp(2.05rem,10.2vw,2.75rem);}
+    .hero-sub{font-size:0.88rem;}
+    .hero-facts{gap:0.8rem 0.9rem;font-size:0.59rem;}
+    .hero-facts span{min-width:52px;}
+    .hero-facts span strong{font-size:1.2rem;}
+    .wrap{padding-left:6vw;padding-right:6vw;}
+    .highlights, .about, .rooms, .gallery, .amenities, .setting, .host, .cta{
+      margin-left:0.5rem;
+      margin-right:0.5rem;
+    }
+    .room-card{padding:1.2rem 1.1rem;}
+    .amen-item{font-size:0.84rem;}
+    .chat-greeting{display:none;}
+  }
+
+  @media (min-width:761px) and (max-width:900px){
+    .wrap{padding-left:5vw;padding-right:5vw;}
+    header{padding-left:5vw;padding-right:5vw;}
+  }
+
+  @media (hover:none){
+    .room-card:hover,
+    .g-item:hover img,
+    .btn:hover{transform:none;box-shadow:none;}
+  }
+
+  /* ============================================
+     Added for multi-page SEO build-out (subpages)
+     ============================================ */
+
+  .subhero{
+    position:relative;
+    height:52vh;
+    min-height:380px;
+    max-height:560px;
+    overflow:hidden;
+    color:#fff;
+    display:flex;
+    align-items:flex-end;
+    margin-top:0;
+  }
+  .subhero-media{position:absolute; inset:0; z-index:0; overflow:hidden; background:#1a2429;}
+  .subhero-media img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    filter:saturate(0.95) brightness(0.72);
+  }
+  .subhero-scrim{
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, rgba(26,36,41,0.15) 0%, rgba(26,36,41,0.55) 65%, rgba(26,36,41,0.88) 100%);
+  }
+  .subhero-content{position:relative; z-index:2; width:100%; padding:6.5rem 6vw 3rem;}
+  .subhero-content .eyebrow{color:var(--gold);}
+  .subhero-content .eyebrow::before{background:var(--gold);}
+  .subhero-content h1{font-size:clamp(2rem, 5vw, 3.4rem); color:#fff; max-width:820px;}
+  .subhero-content p{font-size:1.02rem; color:rgba(255,255,255,0.86); max-width:640px; margin-top:0.9rem;}
+
+  .breadcrumb{
+    position:relative; z-index:2;
+    display:flex; flex-wrap:wrap; align-items:center; gap:0.4em;
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.04em;
+    color:rgba(255,255,255,0.75);
+    padding:5.4rem 6vw 0;
+  }
+  .breadcrumb a{color:rgba(255,255,255,0.75); text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.3);}
+  .breadcrumb a:hover{color:#fff; border-color:#fff;}
+  .breadcrumb span[aria-current]{color:var(--gold);}
+
+  .section-intro{max-width:760px; margin:0 auto 3rem;}
+  .section-intro.left{margin:0 0 3rem;}
+
+  .prose p{margin-bottom:1.05rem; max-width:68ch;}
+  .prose p:last-child{margin-bottom:0;}
+
+  .link-list{list-style:none; margin:1.2rem 0; padding:0;}
+  .link-list li{
+    padding:0.55rem 0; border-bottom:1px solid var(--line);
+    display:flex; justify-content:space-between; gap:1rem; align-items:baseline;
+  }
+  .link-list li:first-child{border-top:1px solid var(--line);}
+  .link-list a{text-decoration:underline; text-decoration-color:rgba(37,51,58,0.35); text-underline-offset:3px;}
+  .link-list a:hover{text-decoration-color:currentColor;}
+
+  .resource-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    gap:1px; background:var(--line); border:1px solid var(--line); margin-top:1.5rem;
+  }
+  .resource-card{background:var(--off-white); padding:1.6rem 1.7rem;}
+  .resource-card .r-cat{
+    font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--amber);
+  }
+  .resource-card h4{font-family:'Fraunces', serif; font-weight:500; font-size:1.15rem; margin:0.5rem 0 0.5rem;}
+  .resource-card p{font-size:0.92rem; color:rgba(37,51,58,0.8); margin-bottom:0.8rem;}
+  .resource-card a.ext-link{
+    font-family:'IBM Plex Mono', monospace; font-size:0.76rem; letter-spacing:0.02em;
+    color:var(--lake); text-decoration:none; border-bottom:1px solid rgba(78,122,140,0.4);
+  }
+  .resource-card a.ext-link:hover{border-color:var(--lake);}
+
+  .faq{max-width:760px;}
+  .faq details{
+    border-bottom:1px solid var(--line);
+    padding:1.1rem 0;
+  }
+  .faq details:first-child{border-top:1px solid var(--line);}
+  .faq summary{
+    font-family:'Fraunces', serif; font-size:1.08rem; font-weight:500;
+    cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:1rem;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{
+    content:"+"; font-family:'IBM Plex Mono', monospace; font-size:1.2rem; color:var(--amber);
+    flex-shrink:0; transition:transform .2s ease;
+  }
+  .faq details[open] summary::after{content:"\2212";}
+  .faq details p{margin-top:0.8rem; color:rgba(37,51,58,0.82); max-width:64ch;}
+
+  .page-links-out{
+    display:flex; flex-wrap:wrap; gap:0.9rem 1.6rem; margin-top:1.8rem;
+  }
+  .page-links-out a{
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem; letter-spacing:0.03em;
+    color:var(--slate-deep); text-decoration:none; padding-bottom:0.2rem;
+    border-bottom:1px solid var(--amber);
+  }
+  .page-links-out a:hover{color:var(--amber);}
+
+  .explore-more{background:var(--stone); padding:3.4rem 0;}
+  .explore-more .wrap > .eyebrow{margin-bottom:1rem;}
+  .explore-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:1.4rem; margin-top:1.6rem;
+  }
+  .explore-card{
+    display:block; text-decoration:none; color:inherit;
+    background:var(--off-white); border:1px solid var(--line); padding:1.5rem 1.6rem;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .explore-card:hover{border-color:var(--amber); transform:translateY(-2px);}
+  .explore-card .eyebrow{font-size:0.66rem; margin-bottom:0.6rem;}
+  .explore-card h3{font-size:1.15rem; margin-bottom:0.4rem;}
+  .explore-card p{font-size:0.88rem; color:rgba(37,51,58,0.75);}
+
+  .table-wrap{overflow-x:auto; margin:1.6rem 0;}
+  table.simple-table{border-collapse:collapse; width:100%; min-width:480px; font-size:0.92rem;}
+  table.simple-table th, table.simple-table td{
+    text-align:left; padding:0.7rem 1rem; border-bottom:1px solid var(--line);
+  }
+  table.simple-table th{
+    font-family:'IBM Plex Mono', monospace; font-size:0.7rem; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--amber); font-weight:500;
+  }
+
+  .footer-sitemap{
+    border-top:1px solid rgba(239,233,220,0.14);
+  }
+  .footer-sitemap .wrap{
+    display:flex; flex-wrap:wrap; gap:0.5rem 1.8rem;
+    padding:1.6rem 6vw 1.2rem;
+    font-family:'IBM Plex Mono', monospace; font-size:0.74rem; letter-spacing:0.02em;
+  }
+  .footer-sitemap a{color:rgba(239,233,220,0.7); text-decoration:none;}
+  .footer-sitemap a:hover{color:var(--gold);}
+
+  @media (max-width:700px){
+    .subhero{height:44vh; min-height:320px;}
+    .breadcrumb{padding-top:5rem;}
+  }
+
+</style>
+<style>
+  /* ============================================================
+     Added for the Concierge page. Additive only — nothing here
+     overrides the base site styles above; it styles new patterns
+     this page introduces, mirroring the existing visual system.
+     ============================================================ */
+
+  .mark img{ height:38px; width:auto; max-width:160px; object-fit:contain; display:block; }
+  @media (max-width:760px){ .mark img{ height:32px; } }
+
+  /* Module cards — same visual treatment as .room-card, honestly named
+     since this grid holds activities, not bedrooms. */
+  .module-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1.4rem; }
+  @media (max-width:860px){ .module-grid{ grid-template-columns:1fr; } }
+  .module-card{
+    background:var(--off-white); border:1px solid var(--line); padding:1.9rem 1.7rem;
+    display:flex; flex-direction:column; gap:0.7rem;
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .module-card:hover{ transform:translateY(-4px); box-shadow:0 18px 34px -22px rgba(26,36,41,0.35); }
+  .module-num{ font-family:'IBM Plex Mono', monospace; font-size:0.75rem; color:var(--amber); letter-spacing:0.08em; }
+  .module-card h4{ font-size:1.22rem; font-weight:400; font-family:'Fraunces', serif; letter-spacing:-0.01em; }
+  .module-card p{ font-size:0.9rem; color:#57646b; font-weight:300; }
+  .module-card .showcase{ margin-top:0.1rem; padding-top:0.8rem; border-top:1px solid var(--line); }
+  .module-card .showcase-label{
+    font-family:'IBM Plex Mono', monospace; font-size:0.66rem; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--amber); display:block; margin-bottom:0.4rem;
+  }
+  @media (hover:none){ .module-card:hover{ transform:none; box-shadow:none; } }
+
+  .domain-block{ margin-top:3.4rem; }
+  .domain-block:first-child{ margin-top:0; }
+  .domain-block h3{ font-size:1.45rem; font-weight:400; margin:0.35rem 0 0.5rem; }
+  .domain-block .domain-desc{ color:#57646b; font-weight:300; font-size:0.94rem; max-width:64ch; margin-bottom:1.6rem; }
+
+  .itin-meta{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; margin-bottom:0.2rem; }
+  .itin-meta .itin-dur{
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--amber); white-space:nowrap;
+  }
+  .itin-for{ font-size:0.85rem; color:#57646b; font-style:italic; font-weight:300; display:block; margin-bottom:0.9rem; }
+  .itin-days{ display:flex; flex-direction:column; gap:0.5rem; }
+  .itin-days li{ list-style:none; font-size:0.9rem; line-height:1.55; color:rgba(37,51,58,0.85); font-weight:300; }
+  .itin-days li b{
+    font-family:'IBM Plex Mono', monospace; font-weight:500; font-style:normal;
+    color:var(--slate-deep); margin-right:0.45em;
+  }
+
+  .link-list li.op{ flex-direction:column; align-items:stretch; }
+  .op-row{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; flex-wrap:wrap; }
+  .op-row .op-name{ font-family:'Fraunces', serif; font-size:1.05rem; }
+  .op-row .op-tag{
+    font-family:'IBM Plex Mono', monospace; font-size:0.7rem; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--amber); white-space:nowrap;
+  }
+  .op-desc{ margin-top:0.35rem; font-size:0.86rem; color:#57646b; font-weight:300; max-width:64ch; }
+
+  .faq-section{ padding:6rem 0; background:var(--off-white); }
+
+  .enquire{ background:var(--stone); padding:6rem 0; }
+  .enquire .grid{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:5vw; align-items:start; }
+  @media (max-width:900px){ .enquire .grid{ grid-template-columns:1fr; gap:2.5rem; } }
+  .enquire h2{ font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin:0.6rem 0 1.1rem; }
+  .enquire-copy p{ color:#3c4a51; font-weight:300; max-width:44ch; margin-bottom:1rem; font-size:1.02rem; }
+  .enquiry-form{ background:var(--off-white); border:1px solid var(--line); padding:2.3rem 2rem; }
+  .enquiry-row{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; margin-bottom:1.15rem; }
+  @media (max-width:560px){ .enquiry-row{ grid-template-columns:1fr; } }
+  .enquiry-field{ display:flex; flex-direction:column; gap:0.4rem; }
+  .enquiry-field label{
+    font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--slate-deep); opacity:0.65;
+  }
+  .enquiry-field input, .enquiry-field select, .enquiry-field textarea{
+    font-family:'Public Sans', sans-serif; font-size:0.95rem; font-weight:400;
+    border:1px solid rgba(37,51,58,0.2); background:var(--off-white);
+    padding:0.68rem 0.8rem; color:var(--slate-deep);
+  }
+  .enquiry-field input:focus-visible, .enquiry-field select:focus-visible, .enquiry-field textarea:focus-visible{
+    outline:2px solid var(--gold); outline-offset:1px;
+  }
+  .enquiry-interests{ display:grid; grid-template-columns:1fr 1fr; gap:0.55rem 1rem; margin:0.2rem 0 1.4rem; }
+  @media (max-width:560px){ .enquiry-interests{ grid-template-columns:1fr; } }
+  .enquiry-check{ display:flex; align-items:center; gap:0.55rem; font-size:0.87rem; font-weight:300; }
+  .enquiry-check input{ accent-color:var(--amber); width:16px; height:16px; }
+  .enquiry-form .btn{ width:100%; justify-content:center; border:none; cursor:pointer; }
+
+  @media (max-width:760px){
+    .module-card{ padding:1.35rem 1.25rem; gap:0.55rem; border-radius:10px; }
+    .enquire{ margin:0 0.65rem 0.9rem; border-radius:18px; overflow:hidden; padding:2.6rem 0; }
+    .faq-section{ margin:0 0.65rem 0.9rem; border-radius:18px; overflow:hidden; padding:2.8rem 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="mark"><img src="images/logo.JPG" alt="Westfield on Ullswater"></a>
+  <div class="header-right">
+    <nav id="siteNav">
+      <a href="cottage.html">The Cottage</a>
+      <a href="bedrooms.html">Bedrooms</a>
+      <a href="concierge.html">The Concierge</a>
+      <a href="ullswater.html">Ullswater</a>
+      <a href="things-to-do.html">Things to Do</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book Now</a>
+    </nav>
+    <a href="https://wa.me/447554334030?text=Hi%20I%20would%20like%20to%20connect%20regarding%20Westfield%20On%20Ullswater" target="_blank" rel="noopener" class="header-whatsapp" aria-label="Message us on WhatsApp">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <path d="M12 3.5a8.4 8.4 0 0 0-7.2 12.7L3.5 20.5l4.4-1.3A8.4 8.4 0 1 0 12 3.5z"/>
+        <path d="M8.7 8.9c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .5.4.2.5.6 1.5.6 1.6.1.1.1.3 0 .4-.1.2-.1.3-.2.4l-.4.4c-.1.1-.2.2-.1.4.2.3.7 1.1 1.5 1.8.9.8 1.6 1 1.9 1.2.2.1.3.1.4 0l.6-.7c.2-.2.3-.2.5-.1l1.4.7c.2.1.3.1.4.3 0 .1 0 .8-.3 1.2-.3.4-1.1.9-1.9.9-1 0-2.6-.4-4.2-2-1.7-1.6-2.6-3.5-2.7-3.8-.1-.3-.6-1.1-.6-1.9 0-.8.4-1.2.5-1.4z" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="header-whatsapp-label">Chat</span>
+    </a>
+    <button class="menu-trigger" id="menuTrigger" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-top">
+    <a href="index.html" class="mark"><img src="images/logo.JPG" alt="Westfield on Ullswater"></a>
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cottage.html">The Cottage</a>
+    <a href="bedrooms.html">Bedrooms</a>
+    <a href="concierge.html">The Concierge</a>
+    <a href="location.html">Location</a>
+    <a href="ullswater.html">Ullswater</a>
+    <a href="walking.html">Walking</a>
+    <a href="things-to-do.html">Things to Do</a>
+    <a href="food-drink.html">Food &amp; Drink</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book Now</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <a href="https://wa.me/447554334030?text=Hi%20I%20would%20like%20to%20connect%20regarding%20Westfield%20On%20Ullswater" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    <a href="https://www.instagram.com/westfieldonullswater/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener">Follow us on Instagram</a>
+    <a href="#" class="open-availability">Check Availability</a>
+  </div>
+</div>
+
+<section class="subhero">
+  <div class="subhero-media">
+    <img src="images/ullswater_panoramic.jpg" alt="Panoramic view of Ullswater and the surrounding Lake District fells" loading="eager" decoding="async">
+  </div>
+  <div class="subhero-scrim"></div>
+  <div class="subhero-content" style="display:flex; flex-direction:column; gap:0.4rem;">
+    <div class="breadcrumb" style="position:static; padding:0 0 1rem;">
+      <a href="index.html">Home</a><span>/</span><span aria-current="page">The Concierge</span>
+    </div>
+    <div class="eyebrow">The Concierge</div>
+    <h1>A place to stay was always going to be the easy part.</h1>
+    <p>Westfield now builds the days around the stay, not just the stay itself — walking, mountain biking, sailing, water skiing, climbing and everything else the valley does well, arranged for our own guests and for anyone else who'd like Ullswater organised properly.</p>
+  </div>
+</section>
+
+<section style="padding:6.5rem 0 5rem;">
+  <div class="wrap">
+    <div class="section-intro left reveal">
+      <div class="eyebrow">From destination to experience</div>
+      <h2 style="font-size:clamp(2rem,4vw,3rem); font-weight:400; margin:0.7rem 0 1.4rem;">Westfield was the destination. Now it's the concierge.</h2>
+    </div>
+    <div class="prose reveal">
+      <p>For years, staying at Westfield has meant a particular kind of week — proper beds, a fire that's actually lit, a terrace view over Ullswater worth getting up for. That hasn't changed.</p>
+      <p>What's changed is what happens after check-in. We now build the days as carefully as we look after the cottage itself: walking, biking, sailing, climbing and everything else the valley does well, arranged around your ability, your appetite for risk, and how many mornings you actually want to be up before eight.</p>
+      <p>Every activity is delivered by the people who run it professionally, day in, day out — our part is knowing who to call, in what order, and around what weather.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--stone); padding:5.5rem 0 6rem;">
+  <div class="wrap">
+    <div class="section-intro left reveal">
+      <div class="eyebrow">How it works</div>
+      <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin:0.6rem 0 0;">The route we take.</h2>
+    </div>
+    <div class="resource-grid reveal">
+      <div class="resource-card">
+        <div class="r-cat">Step 01</div>
+        <h4>Tell us the shape of the trip</h4>
+        <p>Dates, who's coming, how active you want to be, and anything you'd rather avoid — heights, cold water, early starts.</p>
+      </div>
+      <div class="resource-card">
+        <div class="r-cat">Step 02</div>
+        <h4>We plan the route</h4>
+        <p>A day-by-day itinerary drawn from the valley's specialists, timed around weather, crowds, and your own stay.</p>
+      </div>
+      <div class="resource-card">
+        <div class="r-cat">Step 03</div>
+        <h4>The valley delivers it</h4>
+        <p>Every activity is run by the people who actually do it for a living — we don't pretend we can teach you to sail.</p>
+      </div>
+      <div class="resource-card">
+        <div class="r-cat">Step 04</div>
+        <h4>You just turn up</h4>
+        <p>Kit sorted, transport arranged where it's needed, one point of contact for the whole week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="modules" style="padding:6rem 0 6.5rem;">
+  <div class="wrap">
+    <div class="rooms-head reveal">
+      <div>
+        <div class="eyebrow">Build your week</div>
+        <h2>Choose your terrain.</h2>
+      </div>
+      <p style="max-width:38ch; color:#57646b; font-weight:300; font-size:0.96rem;">Every stay can be built from these modules — mixed, matched, and scaled to whoever's actually in the group.</p>
+    </div>
+
+    <div class="domain-block reveal">
+      <h3>On the fells</h3>
+      <p class="domain-desc">From a lakeshore amble to the exposed scramble of Striding Edge, led by qualified mountain leaders who know which ridge to avoid in the wind.</p>
+      <div class="module-grid">
+        <div class="module-card">
+          <div class="module-num">Walking · 01</div>
+          <h4>Guided fell walking</h4>
+          <p>Half-day to full-day routes graded to the group, from Aira Force woodland to the high ridges above Patterdale.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Helvellyn via Striding Edge — a full day on the ridge with a Mountain Leader, finishing at the summit cairn.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Walking · 02</div>
+          <h4>The Ullswater Way, staged</h4>
+          <p>The full 20-mile lake circuit broken into comfortable daily stages, with a steamer ride back if legs give out.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Ullswater Way in four — Glenridding to Pooley Bridge and back, split across two rest days.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Walking · 03</div>
+          <h4>Navigation &amp; fell running</h4>
+          <p>Map-and-compass tuition, or guided fell-running routes for those training for something bigger.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Off the path — a half-day navigation course on Place Fell, small groups only.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="domain-block reveal">
+      <h3>On two wheels</h3>
+      <p class="domain-desc">Whinlatter's purpose-built red and black trails, or a quieter valley road tour — e-bikes available for those saving their legs for the views.</p>
+      <div class="module-grid">
+        <div class="module-card">
+          <div class="module-num">Cycling · 01</div>
+          <h4>Mountain biking &amp; trail centres</h4>
+          <p>Guided or self-guided sessions on Whinlatter's waymarked trails, with hire and uplift arranged for the whole party.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Whinlatter red trail taster — half a day of forest singletrack with a qualified guide.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Cycling · 02</div>
+          <h4>Road &amp; e-bike touring</h4>
+          <p>Self-paced routes along the quieter valley lanes, with luggage transfer if you're touring over several days.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Two-valley e-bike day — Ullswater to Patterdale and back, picnic arranged en route.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="domain-block reveal">
+      <h3>On the water</h3>
+      <p class="domain-desc">Ullswater's sheltered bays make it one of the friendliest stretches of water in the Lakes for beginners, with three islands to land on for those who want more.</p>
+      <div class="module-grid">
+        <div class="module-card">
+          <div class="module-num">Water · 01</div>
+          <h4>Sailing</h4>
+          <p>RYA taster sessions and full courses, in dinghies or the valley's traditional gaff-rigged boats.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Two-hour taster sail — small sheltered bay, tuition included, no experience needed.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Water · 02</div>
+          <h4>Kayaking &amp; canoeing</h4>
+          <p>Guided island-hopping tours, or independent hire for those who know their way around a paddle already.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Island-hopping by kayak — a half-day guided paddle with a beach picnic stop.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Water · 03</div>
+          <h4>Stand-up paddleboarding</h4>
+          <p>Calm-water sessions at dawn or dusk, when the lake is at its stillest — SUP yoga available for early risers.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Sunset paddle — an hour on flat water, boards and buoyancy aids provided.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Water · 04</div>
+          <h4>Water skiing &amp; wakeboarding</h4>
+          <p>The lake's calmer northern reaches, near Pooley Bridge, host the valley's dedicated ski and wake boat operator.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>First-timer wakeboard session — 45 minutes with a qualified boat driver and coach.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="domain-block reveal">
+      <h3>Vertical &amp; adventure</h3>
+      <p class="domain-desc">Borrowdale's crags, the valley's ghylls in full spate, and a cabled route 2,000ft above an old slate quarry — for an afternoon that includes at least one waterfall jump.</p>
+      <div class="module-grid">
+        <div class="module-card">
+          <div class="module-num">Adventure · 01</div>
+          <h4>Rock climbing &amp; abseiling</h4>
+          <p>Instructor-led sessions on real rock in Borrowdale, or an easier introduction on an indoor wall first.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>First climb, real crag — a half-day introduction, ropework and safety handled entirely by the instructor.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Adventure · 02</div>
+          <h4>Ghyll scrambling</h4>
+          <p>Climbing up, sliding down and jumping into a mountain stream in full spate — wetsuits and helmets provided.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Ghyll scramble &amp; plunge pools — three hours, small groups, popular with hen and stag parties.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Adventure · 03</div>
+          <h4>Via ferrata</h4>
+          <p>Cabled crossings and ladders bolted into an old slate quarry face, no climbing experience required.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Via ferrata, extended route — three hours on the exposed line, including a stretch across a mine shaft.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="domain-block reveal">
+      <h3>Land &amp; speed</h3>
+      <p class="domain-desc">Argo cats, quad treks, pony trekking and clay shooting on the fellside — the valley's reliable answer to a wet afternoon, or simply a change of pace.</p>
+      <div class="module-grid">
+        <div class="module-card">
+          <div class="module-num">Land · 01</div>
+          <h4>Off-road &amp; quad biking</h4>
+          <p>Escorted treks across working farmland, with argo cat rides for those who'd rather not drive themselves.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Quad trek &amp; clays — a 40-minute escorted ride followed by 25 clays with an instructor.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Land · 02</div>
+          <h4>Horse &amp; pony riding</h4>
+          <p>Lessons and fellside treks for all abilities, from first-timers to confident riders.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Family pony trek — a mixed-age lesson on the fellside, led by the yard's own instructors.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Land · 03</div>
+          <h4>Archery &amp; clay pigeon shooting</h4>
+          <p>Indoor and outdoor sessions, GNAS-qualified tuition, suitable from complete beginners upward.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Archery hour — a relaxed introduction, good as a standalone or paired with another activity.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="domain-block reveal">
+      <h3>Slow &amp; restorative</h3>
+      <p class="domain-desc">Not every day needs a summit. Dawn yoga, a private chef working with foraged Cumbrian ingredients, or a wild swim before the world wakes up.</p>
+      <div class="module-grid">
+        <div class="module-card">
+          <div class="module-num">Slow · 01</div>
+          <h4>Fell yoga &amp; wild swimming</h4>
+          <p>A slow, guided start to the day on the fellside, followed by a supervised swim in a quiet tarn.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Dawn yoga &amp; swim — an hour before breakfast, mats and wetsuits provided.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Slow · 02</div>
+          <h4>Private chef &amp; foraging</h4>
+          <p>A guided foraging walk followed by a private chef-led dinner using whatever the valley gave up that afternoon.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Forager's supper — an afternoon walk and an evening meal built entirely around it.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="domain-block reveal">
+      <h3>Family &amp; groups</h3>
+      <p class="domain-desc">Multi-generational parties, hen and stag weekends, and corporate away-days, built around activity centres used to mixed ages and abilities in one booking.</p>
+      <div class="module-grid">
+        <div class="module-card">
+          <div class="module-num">Group · 01</div>
+          <h4>Junior adventure days</h4>
+          <p>Pond-dipping, low ropes and beginner kayaking, run by instructors used to working with children.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Junior adventure day — a full day of mixed low-risk activity for under-12s.</p></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Group · 02</div>
+          <h4>Milestones &amp; corporate days</h4>
+          <p>A full itinerary built around one celebration or objective — birthdays, stag and hen weekends, team offsites.</p>
+          <div class="showcase"><span class="showcase-label">Example showcase</span><p>Milestone weekend — the whole stay planned around one big day, activities either side of it.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="itineraries" style="background:var(--stone); padding:5.5rem 0 6rem;">
+  <div class="wrap">
+    <div class="rooms-head reveal">
+      <div>
+        <div class="eyebrow">Put together already</div>
+        <h2>Showcase itineraries.</h2>
+      </div>
+      <p style="max-width:40ch; color:#57646b; font-weight:300; font-size:0.96rem;">Four ways we've already put these modules together. Every one can be adjusted, shortened, or built from scratch instead.</p>
+    </div>
+    <div class="resource-grid reveal">
+
+      <div class="resource-card">
+        <div class="itin-meta"><h4 style="margin:0;">The Adventurer's Weekend</h4><span class="itin-dur">2 nights</span></div>
+        <span class="itin-for">For active couples and friend groups who want variety over pace.</span>
+        <ul class="itin-days">
+          <li><b>Fri</b>Arrive, settle in, fireside supper at Westfield.</li>
+          <li><b>Sat</b>Whinlatter mountain bike taster in the morning; free afternoon by the lake.</li>
+          <li><b>Sun</b>Ghyll scrambling before lunch, a sailing taster in the afternoon.</li>
+        </ul>
+      </div>
+
+      <div class="resource-card">
+        <div class="itin-meta"><h4 style="margin:0;">The Water Lover's Long Weekend</h4><span class="itin-dur">3 nights</span></div>
+        <span class="itin-for">For guests who'd rather be on the lake than beside it.</span>
+        <ul class="itin-days">
+          <li><b>Fri</b>Arrive, sunset paddleboard session.</li>
+          <li><b>Sat</b>Island-hopping kayak tour, wakeboard taster in the afternoon.</li>
+          <li><b>Sun</b>RYA sailing taster, picnic on the water.</li>
+          <li><b>Mon</b>Slow morning, depart after breakfast.</li>
+        </ul>
+      </div>
+
+      <div class="resource-card">
+        <div class="itin-meta"><h4 style="margin:0;">The Fell Walker's Retreat</h4><span class="itin-dur">4 nights</span></div>
+        <span class="itin-for">For serious walkers, or anyone here simply for the miles.</span>
+        <ul class="itin-days">
+          <li><b>Days 1–2</b>The Ullswater Way, staged across two days with a steamer connection.</li>
+          <li><b>Day 3</b>Rest day — fell yoga at dawn, a wild swim, no boots required.</li>
+          <li><b>Day 4</b>Helvellyn via Striding Edge, guided, weather-dependent timing.</li>
+        </ul>
+      </div>
+
+      <div class="resource-card">
+        <div class="itin-meta"><h4 style="margin:0;">The Family Adventure Week</h4><span class="itin-dur">7 nights</span></div>
+        <span class="itin-for">For multi-generational groups who all want something different.</span>
+        <ul class="itin-days">
+          <li><b>Early week</b>Junior adventure day for the children, quad trek for the adults.</li>
+          <li><b>Mid-week</b>Steamer cruise to Pooley Bridge, pony trekking, one full rest day.</li>
+          <li><b>Late week</b>Family kayaking session, clay pigeon shooting, farewell supper.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center;">Staying elsewhere on Ullswater?</div>
+    <h2>Not staying with us? The concierge still travels.</h2>
+    <p>Westfield began as a place to stay. It's become the number people call before they've even booked anywhere. Whether you're in one of our own rooms, a cottage along the lakeshore, or a tent further up the valley, the same concierge can build your week.</p>
+    <a href="#enquire" class="btn">Enquire without booking a stay →</a>
+  </div>
+</section>
+
+<section style="padding:6rem 0 6.5rem;">
+  <div class="wrap">
+    <div class="rooms-head reveal">
+      <div>
+        <div class="eyebrow">The valley, mapped</div>
+        <h2>What's already on our doorstep.</h2>
+      </div>
+      <p style="max-width:40ch; color:#57646b; font-weight:300; font-size:0.96rem;">A working network of outdoor specialists — some on the lakeshore, others a short drive through Keswick or up towards Blencathra.</p>
+    </div>
+
+    <ul class="link-list reveal">
+      <li class="op">
+        <div class="op-row"><span class="op-name">Glenridding Sailing Centre</span><span class="op-tag">Sailing · kayaking</span></div>
+        <p class="op-desc">RYA tuition and boat hire from a lakeshore base at the southern end of Ullswater.</p>
+      </li>
+      <li class="op">
+        <div class="op-row"><span class="op-name">Keswick's climbing &amp; ghyll operators</span><span class="op-tag">Climbing · scrambling</span></div>
+        <p class="op-desc">Rock climbing in Borrowdale, ghyll scrambling, high ropes and indoor climbing, a short drive from Ullswater.</p>
+      </li>
+      <li class="op">
+        <div class="op-row"><span class="op-name">Whinlatter Forest Park</span><span class="op-tag">Mountain biking</span></div>
+        <p class="op-desc">England's only true mountain forest, with waymarked red and black trails and bike hire on site.</p>
+      </li>
+      <li class="op">
+        <div class="op-row"><span class="op-name">Honister Slate Mine</span><span class="op-tag">Via ferrata</span></div>
+        <p class="op-desc">Cabled via ferrata routes across an old slate quarry face at the top of Honister Pass.</p>
+      </li>
+      <li class="op">
+        <div class="op-row"><span class="op-name">Rookin House Activity Centre</span><span class="op-tag">Land &amp; speed</span></div>
+        <p class="op-desc">Quad biking, off-roading, horse riding, archery and clay pigeon shooting, a few miles from Ullswater.</p>
+      </li>
+      <li class="op">
+        <div class="op-row"><span class="op-name">Pooley Bridge wake &amp; ski operators</span><span class="op-tag">Water skiing</span></div>
+        <p class="op-desc">The lake's calmer northern waters, used for wakeboarding and water skiing sessions.</p>
+      </li>
+      <li class="op">
+        <div class="op-row"><span class="op-name">Ullswater 'Steamers'</span><span class="op-tag">Heritage cruises</span></div>
+        <p class="op-desc">Vintage vessels running between Glenridding, Howtown and Pooley Bridge since 1855.</p>
+      </li>
+    </ul>
+
+    <div class="prose reveal" style="margin-top:2.4rem;">
+      <p><strong>Worth adding to the list:</strong> a few things that don't always make the obvious brochure, but are well within reach and worth building in — dark-sky stargazing (the valley is a registered Dark Sky Discovery site), falconry experiences, alpaca trekking, guided wild swimming, whisky and gin tastings at the valley's own distillery and brewery, a private charter on one of the heritage steamers, landscape photography walks, fellside golf, and guided fly-fishing for brown trout on the lake itself.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="wrap">
+    <div class="section-intro left reveal">
+      <div class="eyebrow">A few questions</div>
+      <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin:0.6rem 0 2rem;">Before you enquire.</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Do we have to stay at Westfield to use the concierge?</summary>
+        <p>No. The concierge service is open to anyone staying anywhere on Ullswater — our own guests just get it as standard.</p>
+      </details>
+      <details>
+        <summary>How far in advance should we book activities?</summary>
+        <p>As soon as your dates are fixed, ideally. Popular sessions — via ferrata, sailing tuition, ghyll scrambling — get booked up in peak season, so the earlier we know your plans the more choice we have.</p>
+      </details>
+      <details>
+        <summary>What happens if the weather turns?</summary>
+        <p>We build a wet-weather alternative into every itinerary from the start, and stay in touch with each operator on the day. Nobody's left standing in a field wondering what's happening.</p>
+      </details>
+      <details>
+        <summary>Can you organise activities for large or mixed-ability groups?</summary>
+        <p>Yes — it's one of the things we spend the most time on. Most of the valley's operators are used to running sessions for a wide age and ability range within a single booking.</p>
+      </details>
+      <details>
+        <summary>Is there an extra cost for the concierge service itself?</summary>
+        <p>Planning your itinerary is free. You pay each activity operator directly at their own rates — we don't mark anything up.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="enquire" id="enquire">
+  <div class="wrap grid">
+    <div class="enquire-copy reveal">
+      <div class="eyebrow">Start planning</div>
+      <h2>Tell us about the trip you want.</h2>
+      <p>A few details is all we need to start drafting a route. No obligation to book, and no obligation to stay with us either.</p>
+    </div>
+    <form class="enquiry-form reveal" onsubmit="return false;">
+      <div class="enquiry-row">
+        <div class="enquiry-field"><label for="eq-name">Name</label><input id="eq-name" type="text" placeholder="Full name"></div>
+        <div class="enquiry-field"><label for="eq-email">Email</label><input id="eq-email" type="email" placeholder="you@example.com"></div>
+      </div>
+      <div class="enquiry-row">
+        <div class="enquiry-field"><label for="eq-dates">Dates</label><input id="eq-dates" type="text" placeholder="Fixed dates, or flexible"></div>
+        <div class="enquiry-field"><label for="eq-party">Party size</label><input id="eq-party" type="number" min="1" placeholder="e.g. 6"></div>
+      </div>
+      <div class="enquiry-row">
+        <div class="enquiry-field">
+          <label for="eq-staying">Staying with us?</label>
+          <select id="eq-staying">
+            <option>Yes, at Westfield</option>
+            <option>No, staying elsewhere in the valley</option>
+            <option>Not decided yet</option>
+          </select>
+        </div>
+        <div class="enquiry-field">
+          <label for="eq-pace">Preferred pace</label>
+          <select id="eq-pace">
+            <option>Full-throttle, pack every day</option>
+            <option>A good mix of activity and rest</option>
+            <option>Mostly slow, one or two highlights</option>
+          </select>
+        </div>
+      </div>
+      <div class="enquiry-field" style="margin-bottom:0.6rem;"><label>Interests</label></div>
+      <div class="enquiry-interests">
+        <label class="enquiry-check"><input type="checkbox"> Walking &amp; the fells</label>
+        <label class="enquiry-check"><input type="checkbox"> Cycling &amp; mountain biking</label>
+        <label class="enquiry-check"><input type="checkbox"> Sailing &amp; paddling</label>
+        <label class="enquiry-check"><input type="checkbox"> Water skiing &amp; wakeboarding</label>
+        <label class="enquiry-check"><input type="checkbox"> Climbing &amp; ghyll scrambling</label>
+        <label class="enquiry-check"><input type="checkbox"> Land &amp; speed</label>
+        <label class="enquiry-check"><input type="checkbox"> Wellness &amp; slow living</label>
+        <label class="enquiry-check"><input type="checkbox"> Family &amp; group activities</label>
+      </div>
+      <div class="enquiry-field" style="margin-bottom:1.3rem;">
+        <label for="eq-notes">Anything else we should know</label>
+        <textarea id="eq-notes" rows="3" placeholder="Ages in the group, anything to avoid, a celebration to build around..."></textarea>
+      </div>
+      <button type="submit" class="btn">Send enquiry</button>
+    </form>
+  </div>
+</section>
+
+<section class="explore-more">
+  <div class="wrap">
+    <div class="eyebrow reveal">Read more</div>
+    <h2 class="reveal" style="font-size:clamp(1.7rem,3vw,2.2rem); font-weight:400; margin:0.6rem 0 0;">Explore the rest of the valley.</h2>
+    <div class="explore-grid reveal">
+      <a href="ullswater.html" class="explore-card">
+        <div class="eyebrow">On the lake</div>
+        <h3>Ullswater</h3>
+        <p>Sailing, paddleboarding, kayaking and the steamer — the lake itself, in detail.</p>
+      </a>
+      <a href="walking.html" class="explore-card">
+        <div class="eyebrow">On foot</div>
+        <h3>Walking</h3>
+        <p>The Ullswater Way and the fells above it, from lakeshore strolls to Striding Edge.</p>
+      </a>
+      <a href="things-to-do.html" class="explore-card">
+        <div class="eyebrow">Beyond the cottage</div>
+        <h3>Things to Do</h3>
+        <p>The wider list of attractions and days out around Watermillock and Ullswater.</p>
+      </a>
+      <a href="food-drink.html" class="explore-card">
+        <div class="eyebrow">After the activity</div>
+        <h3>Food &amp; Drink</h3>
+        <p>Where to eat locally, from The Brackenrigg Inn to Another Place.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <nav class="footer-sitemap" aria-label="Site pages">
+    <div class="wrap">
+      <a href="index.html">Home</a>
+      <a href="cottage.html">The Cottage</a>
+      <a href="bedrooms.html">Bedrooms</a>
+      <a href="concierge.html">The Concierge</a>
+      <a href="location.html">Location</a>
+      <a href="ullswater.html">Ullswater</a>
+      <a href="walking.html">Walking</a>
+      <a href="things-to-do.html">Things to Do</a>
+      <a href="food-drink.html">Food &amp; Drink</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book Now</a>
+    </div>
+  </nav>
+  <div class="wrap footer-inner">
+    <span>Westfield, a Holiday Cottage on Ullswater · Bennet Head, Watermillock, Cumbria</span>
+    <a href="#" class="open-availability footer-check-availability">Check Availability</a>
+    <a href="https://www.instagram.com/westfieldonullswater/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener" class="footer-social" aria-label="Follow Westfield on Instagram">
+      <span class="footer-social-label">Follow us on Instagram</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
+        <circle cx="12" cy="12" r="4.6"/>
+        <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<div class="privacy-note">
+  <p>When you submit your email address above, it's stored securely and used only to send you occasional updates and offers about Westfield. It is not shared with or sold to third parties. You can <button type="button" class="privacy-unsub-trigger" id="unsubTrigger">unsubscribe</button> at any time. This site also uses Google Analytics cookies to understand how visitors use the site, but only once you've given consent. You can change your choice anytime via <button type="button" class="cookie-settings-trigger" id="cookieSettingsTrigger">cookie settings</button>.</p>
+</div>
+
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to run Google Analytics, which helps us understand how visitors use this site. These aren't set until you accept. See our privacy note above for more on how we handle your data.</p>
+  <div class="cookie-banner-actions">
+    <button type="button" class="cookie-reject" id="cookieReject">Reject</button>
+    <button type="button" class="cookie-accept" id="cookieAccept">Accept</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="unsubOverlay">
+  <div class="modal-box" id="unsubBox">
+    <button class="modal-close" id="unsubClose" aria-label="Close">&times;</button>
+    <h3>Unsubscribe</h3>
+    <p>Enter the email address you'd like removed from Westfield updates and offers.</p>
+    <form class="modal-form" id="unsubForm">
+      <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+      <button type="submit">Unsubscribe</button>
+    </form>
+    <p class="modal-success">You've been unsubscribed.</p>
+  </div>
+</div>
+
+
+<div class="newsletter-box" id="newsletterBox">
+  <button class="newsletter-close" id="newsletterClose" aria-label="Close">&times;</button>
+  <div class="eyebrow">Stay in touch</div>
+  <h3>Westfield updates &amp; offers</h3>
+  <p>Sign up for occasional news, availability updates and special offers for Westfield.</p>
+  <form class="newsletter-form" id="newsletterForm">
+    <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="newsletter-success">Thanks — you're on the list.</p>
+</div>
+
+<a href="https://wa.me/447554334030?text=Hi%20I%20would%20like%20to%20connect%20regarding%20Westfield%20On%20Ullswater" target="_blank" rel="noopener" class="chat-bubble" id="chatBubble" aria-label="Chat with us on WhatsApp">
+  <span class="chat-greeting">Hi, I'm your host for Westfield should you need any assistance today</span>
+  <span class="chat-avatar-wrap">
+    <span class="chat-bubble-avatar">
+      <img src="images/selfie.jpg" alt="James, host of Westfield" loading="lazy" decoding="async">
+    </span>
+    <span class="chat-bubble-badge">
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <path d="M12 3.5a8.4 8.4 0 0 0-7.2 12.7L3.5 20.5l4.4-1.3A8.4 8.4 0 1 0 12 3.5z"/>
+        <path d="M8.7 8.9c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .5.4.2.5.6 1.5.6 1.6.1.1.1.3 0 .4-.1.2-.1.3-.2.4l-.4.4c-.1.1-.2.2-.1.4.2.3.7 1.1 1.5 1.8.9.8 1.6 1 1.9 1.2.2.1.3.1.4 0l.6-.7c.2-.2.3-.2.5-.1l1.4.7c.2.1.3.1.4.3 0 .1 0 .8-.3 1.2-.3.4-1.1.9-1.9.9-1 0-2.6-.4-4.2-2-1.7-1.6-2.6-3.5-2.7-3.8-.1-.3-.6-1.1-.6-1.9 0-.8.4-1.2.5-1.4z" fill="currentColor" stroke="none"/>
+      </svg>
+    </span>
+  </span></a>
+
+<div class="mobile-book-bar">
+  <a href="#" class="open-availability">Check Dates</a>
+</div>
+
+<button type="button" class="availability-tab" id="availabilityTab" aria-expanded="false" aria-controls="availabilityPanel">Availability</button>
+<div class="availability-backdrop" id="availabilityBackdrop"></div>
+<div class="availability-panel" id="availabilityPanel">
+  <div class="availability-panel-header">
+    <h3>Check Availability</h3>
+    <button type="button" class="availability-panel-close" id="availabilityClose" aria-label="Close availability calendar">&times;</button>
+  </div>
+  <div class="availability-panel-body">
+    <script id="InnStyle-js" src="https://developer.innstyle.co.uk/calendar.min.js"></script>
+    <script>InnStyle('staywestfield');</script>
+  </div>
+</div>
+
+<script>
+  // Google Analytics is only loaded after the user consents — see the
+  // cookie banner below. Nothing analytics-related runs before that.
+  function loadGoogleAnalytics(){
+    if(window.gaLoaded) return;
+    window.gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RP1K0VXQ7T';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-RP1K0VXQ7T');
+  }
+
+  const cookieBanner = document.getElementById('cookieBanner');
+  const cookieAccept = document.getElementById('cookieAccept');
+  const cookieReject = document.getElementById('cookieReject');
+  const cookieSettingsTrigger = document.getElementById('cookieSettingsTrigger');
+
+  function showCookieBanner(){
+    if(cookieBanner) cookieBanner.classList.add('is-visible');
+  }
+  function hideCookieBanner(){
+    if(cookieBanner) cookieBanner.classList.remove('is-visible');
+  }
+
+  const cookieChoice = localStorage.getItem('cookie_consent');
+  if(cookieChoice === 'accepted'){
+    loadGoogleAnalytics();
+  } else if(cookieChoice !== 'rejected'){
+    showCookieBanner();
+  }
+
+  if(cookieAccept){
+    cookieAccept.addEventListener('click', function(){
+      localStorage.setItem('cookie_consent', 'accepted');
+      loadGoogleAnalytics();
+      hideCookieBanner();
+    });
+  }
+  if(cookieReject){
+    cookieReject.addEventListener('click', function(){
+      localStorage.setItem('cookie_consent', 'rejected');
+      hideCookieBanner();
+    });
+  }
+  if(cookieSettingsTrigger){
+    cookieSettingsTrigger.addEventListener('click', function(){
+      showCookieBanner();
+    });
+  }
+
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.15});
+  els.forEach(el=>io.observe(el));
+
+  const availabilityTab = document.getElementById('availabilityTab');
+  const availabilityPanel = document.getElementById('availabilityPanel');
+  const availabilityClose = document.getElementById('availabilityClose');
+  const availabilityBackdrop = document.getElementById('availabilityBackdrop');
+
+  function openAvailability(){
+    availabilityPanel.classList.add('is-open');
+    availabilityBackdrop.classList.add('is-open');
+    availabilityTab.setAttribute('aria-expanded', 'true');
+  }
+  function closeAvailability(){
+    availabilityPanel.classList.remove('is-open');
+    availabilityBackdrop.classList.remove('is-open');
+    availabilityTab.setAttribute('aria-expanded', 'false');
+  }
+  if(availabilityTab && availabilityPanel){
+    availabilityTab.addEventListener('click', ()=>{
+      if(availabilityPanel.classList.contains('is-open')){
+        closeAvailability();
+      } else {
+        openAvailability();
+      }
+    });
+  }
+  if(availabilityClose){
+    availabilityClose.addEventListener('click', closeAvailability);
+  }
+  if(availabilityBackdrop){
+    availabilityBackdrop.addEventListener('click', closeAvailability);
+  }
+  document.querySelectorAll('.open-availability').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      openAvailability();
+    });
+  });
+
+  const menuTrigger = document.getElementById('menuTrigger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+  function openMobileMenu(){
+    mobileMenu.classList.add('is-open');
+    menuTrigger.setAttribute('aria-expanded', 'true');
+  }
+  function closeMobileMenu(){
+    mobileMenu.classList.remove('is-open');
+    menuTrigger.setAttribute('aria-expanded', 'false');
+  }
+  if(menuTrigger && mobileMenu){
+    menuTrigger.addEventListener('click', openMobileMenu);
+  }
+  if(mobileMenuClose){
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+  }
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('is-open')){
+      closeMobileMenu();
+    }
+  });
+  if(mobileMenu){
+    mobileMenu.querySelectorAll('a').forEach(link=>{
+      link.addEventListener('click', closeMobileMenu);
+    });
+  }
+
+  const heroEl = document.querySelector('.hero');
+  const heroScrim = document.querySelector('.hero-scrim');
+  function updateHeroFade(){
+    if(!heroEl || !heroScrim) return;
+    const heroHeight = heroEl.offsetHeight || 1;
+    const progress = Math.min(Math.max(window.scrollY / heroHeight, 0), 1);
+    heroScrim.style.opacity = (progress * 0.8).toFixed(2);
+  }
+  window.addEventListener('scroll', updateHeroFade, {passive:true});
+  window.addEventListener('resize', updateHeroFade);
+  updateHeroFade();
+
+  const heroImgA = document.querySelector('.hero-img-a');
+  const heroImgB = document.querySelector('.hero-img-b');
+  const heroContentEl = document.querySelector('.hero-content');
+  let heroTimers = [];
+
+  function clearHeroTimers(){
+    heroTimers.forEach(t => clearTimeout(t));
+    heroTimers = [];
+  }
+
+  function playHeroSequence(){
+    if(!heroImgA || !heroImgB) return;
+    clearHeroTimers();
+
+    // reset both images to their starting state
+    heroImgB.classList.remove('is-visible', 'is-zooming');
+    heroImgA.classList.remove('is-zooming', 'is-fading');
+    if(heroContentEl) heroContentEl.classList.remove('is-visible');
+    void heroImgA.offsetWidth; // force reflow so the animation can restart
+    void heroImgB.offsetWidth;
+
+    const CROSSFADE_START_MS = 2200; // shorter dwell time before the crossfade begins
+
+    // phase 1: image A starts its slow zoom
+    heroImgA.classList.add('is-zooming');
+
+    // phase 2: crossfade begins well before image A's zoom finishes, so the two
+    // motions overlap — A fades out while B fades in and starts its own zoom.
+    // The hero text floats up into place at the same moment, so the whole
+    // reveal — image and text — feels like one connected motion.
+    heroTimers.push(setTimeout(()=>{
+      heroImgA.classList.add('is-fading');
+      heroImgB.classList.add('is-visible', 'is-zooming');
+      if(heroContentEl) heroContentEl.classList.add('is-visible');
+    }, CROSSFADE_START_MS));
+  }
+
+  playHeroSequence();
+
+  if(heroEl){
+    let hasLeftHero = false;
+    const heroReplayObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting){
+          hasLeftHero = true;
+        } else if(hasLeftHero){
+          hasLeftHero = false;
+          playHeroSequence();
+        }
+      });
+    }, {threshold:0.6});
+    heroReplayObserver.observe(heroEl);
+  }
+
+  const chatBubble = document.getElementById('chatBubble');
+  if(chatBubble){
+    let chatBubbleShown = false;
+    function checkChatBubbleScroll(){
+      if(!chatBubbleShown && window.scrollY > 120){
+        chatBubbleShown = true;
+        chatBubble.classList.add('is-visible');
+        window.removeEventListener('scroll', checkChatBubbleScroll);
+      }
+    }
+    window.addEventListener('scroll', checkChatBubbleScroll, {passive:true});
+    checkChatBubbleScroll();
+  }
+
+  const newsletterBox = document.getElementById('newsletterBox');
+  const newsletterClose = document.getElementById('newsletterClose');
+  const newsletterForm = document.getElementById('newsletterForm');
+  const galleryEl = document.getElementById('itineraries');
+  let newsletterDismissed = false;
+
+  if(newsletterBox && galleryEl){
+    const newsletterObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting && !newsletterDismissed){
+          newsletterBox.classList.add('is-visible');
+        }
+      });
+    }, {threshold:0.15});
+    newsletterObserver.observe(galleryEl);
+  }
+
+  if(newsletterClose){
+    newsletterClose.addEventListener('click', ()=>{
+      newsletterDismissed = true;
+      newsletterBox.classList.remove('is-visible');
+    });
+  }
+
+  // Paste your Google Apps Script Web App URL here once deployed
+  // (see setup instructions — Extensions > Apps Script > Deploy > Web app).
+  const GOOGLE_SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxMnABvzZoL22w2mbKTwQmEQ0ub0-7M9tz32rbsC3YnjOsU9DjAzUNoOpWj1p8Wmjm_/exec';
+
+  if(newsletterForm){
+    newsletterForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const email = newsletterForm.querySelector('input[type="email"]').value;
+
+      if(GOOGLE_SHEET_ENDPOINT && GOOGLE_SHEET_ENDPOINT.indexOf('PASTE_YOUR') === -1){
+        // no-cors: Apps Script doesn't return CORS headers, so the response
+        // is opaque — we can't read it, but the row is appended regardless.
+        fetch(GOOGLE_SHEET_ENDPOINT, {
+          method:'POST',
+          mode:'no-cors',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({action:'subscribe', email:email})
+        }).catch(()=>{ /* network errors ignored — see note above */ });
+      }
+
+      newsletterBox.classList.add('is-submitted');
+      setTimeout(()=>{
+        newsletterDismissed = true;
+        newsletterBox.classList.remove('is-visible');
+      }, 2600);
+    });
+  }
+
+  const unsubTrigger = document.getElementById('unsubTrigger');
+  const unsubOverlay = document.getElementById('unsubOverlay');
+  const unsubClose = document.getElementById('unsubClose');
+  const unsubForm = document.getElementById('unsubForm');
+  const unsubBox = document.getElementById('unsubBox');
+
+  if(unsubTrigger && unsubOverlay){
+    unsubTrigger.addEventListener('click', ()=>{
+      unsubOverlay.classList.add('is-open');
+    });
+  }
+  if(unsubClose && unsubOverlay){
+    unsubClose.addEventListener('click', ()=>{
+      unsubOverlay.classList.remove('is-open');
+    });
+  }
+  if(unsubOverlay){
+    unsubOverlay.addEventListener('click', (e)=>{
+      if(e.target === unsubOverlay) unsubOverlay.classList.remove('is-open');
+    });
+  }
+  if(unsubForm){
+    unsubForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const email = unsubForm.querySelector('input[type="email"]').value;
+
+      if(GOOGLE_SHEET_ENDPOINT && GOOGLE_SHEET_ENDPOINT.indexOf('PASTE_YOUR') === -1){
+        fetch(GOOGLE_SHEET_ENDPOINT, {
+          method:'POST',
+          mode:'no-cors',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({action:'unsubscribe', email:email})
+        }).catch(()=>{ /* network errors ignored — see note above */ });
+      }
+
+      unsubBox.classList.add('is-submitted');
+      setTimeout(()=>{
+        unsubOverlay.classList.remove('is-open');
+        unsubBox.classList.remove('is-submitted');
+        unsubForm.reset();
+      }, 2200);
+    });
+  }
+
+</script>
+
+</body>
+</html>
