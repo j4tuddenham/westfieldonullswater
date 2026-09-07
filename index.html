@@ -1492,7 +1492,7 @@
       <h2>Tell us about the trip you want.</h2>
       <p>A few details is all we need to start drafting a route. No obligation to book, and no obligation to stay with us either.</p>
     </div>
-    <form class="enquiry-form reveal" onsubmit="return false;">
+    <form class="enquiry-form reveal" id="enquiryForm">
       <div class="enquiry-row">
         <div class="enquiry-field"><label for="eq-name">Name</label><input id="eq-name" type="text" placeholder="Full name"></div>
         <div class="enquiry-field"><label for="eq-email">Email</label><input id="eq-email" type="email" placeholder="you@example.com"></div>
@@ -1535,6 +1535,7 @@
         <textarea id="eq-notes" rows="3" placeholder="Ages in the group, anything to avoid, a celebration to build around..."></textarea>
       </div>
       <button type="submit" class="btn">Send enquiry</button>
+      <p style="font-size:0.78rem; color:#57646b; font-weight:300; margin-top:0.8rem; text-align:center;">Opens your email app with these details filled in, addressed to enquiries@westfieldonullswater.co.uk — just hit send.</p>
     </form>
   </div>
 </section>
@@ -1958,6 +1959,55 @@
         unsubBox.classList.remove('is-submitted');
         unsubForm.reset();
       }, 2200);
+    });
+  }
+
+  // Concierge enquiry form — builds a pre-filled email rather than posting
+  // anywhere, so no server or third-party form service is needed. Opens the
+  // visitor's own email client addressed to the enquiries inbox.
+  const enquiryForm = document.getElementById('enquiryForm');
+  if(enquiryForm){
+    enquiryForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+
+      const val = (id) => {
+        const el = document.getElementById(id);
+        return el ? el.value.trim() : '';
+      };
+
+      const name = val('eq-name');
+      const email = val('eq-email');
+      const dates = val('eq-dates');
+      const party = val('eq-party');
+      const staying = document.getElementById('eq-staying').value;
+      const pace = document.getElementById('eq-pace').value;
+      const notes = val('eq-notes');
+
+      const interests = Array.from(document.querySelectorAll('.enquiry-interests .enquiry-check'))
+        .filter(label => label.querySelector('input').checked)
+        .map(label => label.textContent.trim());
+
+      const bodyLines = [
+        'New concierge enquiry from staywestfield.uk',
+        '',
+        'Name: ' + (name || '(not given)'),
+        'Email: ' + (email || '(not given)'),
+        'Dates: ' + (dates || '(not given)'),
+        'Party size: ' + (party || '(not given)'),
+        'Staying with us: ' + staying,
+        'Preferred pace: ' + pace,
+        'Interests: ' + (interests.length ? interests.join(', ') : '(none selected)'),
+        '',
+        'Anything else:',
+        (notes || '(nothing added)')
+      ];
+
+      const subject = 'Concierge enquiry' + (name ? ' — ' + name : '');
+      const mailto = 'mailto:enquiries@westfieldonullswater.co.uk'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(bodyLines.join('\r\n'));
+
+      window.location.href = mailto;
     });
   }
 
