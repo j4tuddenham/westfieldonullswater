@@ -13,14 +13,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#1a2429">
-<title>The Concierge — Curated Lake District Experiences | Westfield on Ullswater</title>
-<meta name="description" content="Westfield's concierge service builds your Lake District week — walking, mountain biking, sailing, water skiing, climbing and more, arranged around your stay at Westfield or anywhere else on Ullswater.">
+<title>Land &amp; Speed — Off-Road, Horses &amp; Clays | The Concierge</title>
+<meta name="description" content="Quad biking, off-roading, horse riding, archery, clay shooting and falconry — arranged around the Lake District by Westfield's concierge.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.staywestfield.uk/concierge.html">
-<meta property="og:title" content="The Concierge — Curated Lake District Experiences | Westfield on Ullswater">
-<meta property="og:description" content="Walking, mountain biking, sailing, water skiing, climbing and more — built into your week on Ullswater by Westfield's concierge.">
+<link rel="canonical" href="https://www.staywestfield.uk/concierge-land.html">
+<meta property="og:title" content="Land &amp; Speed — Off-Road, Horses &amp; Clays | The Concierge">
+<meta property="og:description" content="Quad biking, off-roading, horse riding, archery, clay shooting and falconry — arranged around the Lake District by Westfield's concierge.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.staywestfield.uk/concierge.html">
+<meta property="og:url" content="https://www.staywestfield.uk/concierge-land.html">
 <meta property="og:image" content="https://www.staywestfield.uk/images/ullswater_panoramic.jpg">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
@@ -984,7 +984,8 @@
   .footer-sitemap a:hover{color:var(--gold);}
 
   @media (max-width:700px){
-    .subhero{ height:auto; min-height:340px; max-height:none; }
+    .subhero{height:44vh; min-height:320px;}
+    .breadcrumb{padding-top:5rem;}
   }
 
 </style>
@@ -996,6 +997,7 @@
      ============================================================ */
 
   [id]{ scroll-margin-top:100px; }
+
 
   /* Module cards — same visual treatment as .room-card, honestly named
      since this grid holds activities, not bedrooms. */
@@ -1051,8 +1053,27 @@
   @media (max-width:900px){ .enquire .grid{ grid-template-columns:1fr; gap:2.5rem; } }
   .enquire h2{ font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin:0.6rem 0 1.1rem; }
   .enquire-copy p{ color:#3c4a51; font-weight:300; max-width:44ch; margin-bottom:1rem; font-size:1.02rem; }
-  .enquiry-form{ background:var(--off-white); border:1px solid var(--line); padding:0.9rem; }
-  .enquiry-form iframe{ display:block; width:100%; border:0; background:var(--off-white); }
+  .enquiry-form{ background:var(--off-white); border:1px solid var(--line); padding:2.3rem 2rem; }
+  .enquiry-row{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; margin-bottom:1.15rem; }
+  @media (max-width:560px){ .enquiry-row{ grid-template-columns:1fr; } }
+  .enquiry-field{ display:flex; flex-direction:column; gap:0.4rem; }
+  .enquiry-field label{
+    font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--slate-deep); opacity:0.65;
+  }
+  .enquiry-field input, .enquiry-field select, .enquiry-field textarea{
+    font-family:'Public Sans', sans-serif; font-size:0.95rem; font-weight:400;
+    border:1px solid rgba(37,51,58,0.2); background:var(--off-white);
+    padding:0.68rem 0.8rem; color:var(--slate-deep);
+  }
+  .enquiry-field input:focus-visible, .enquiry-field select:focus-visible, .enquiry-field textarea:focus-visible{
+    outline:2px solid var(--gold); outline-offset:1px;
+  }
+  .enquiry-interests{ display:grid; grid-template-columns:1fr 1fr; gap:0.55rem 1rem; margin:0.2rem 0 1.4rem; }
+  @media (max-width:560px){ .enquiry-interests{ grid-template-columns:1fr; } }
+  .enquiry-check{ display:flex; align-items:center; gap:0.55rem; font-size:0.87rem; font-weight:300; }
+  .enquiry-check input{ accent-color:var(--amber); width:16px; height:16px; }
+  .enquiry-form .btn{ width:100%; justify-content:center; border:none; cursor:pointer; }
 
   @media (max-width:760px){
     .module-card{ padding:1.35rem 1.25rem; gap:0.55rem; border-radius:10px; }
@@ -1061,13 +1082,13 @@
   }
 </style>
 </head>
-<body id="top">
+<body>
 
 <header>
   <a href="https://www.staywestfield.uk" class="mark">Westfield</a>
   <div class="header-right">
     <nav id="siteNav">
-      <a href="#top">The Concierge</a>
+      <a href="concierge.html">The Concierge</a>
       <a href="https://www.staywestfield.uk">Stay Westfield</a>
     </nav>
     <a href="https://wa.me/447554334030?text=Hi%20I%20would%20like%20to%20connect%20regarding%20Westfield%20On%20Ullswater" target="_blank" rel="noopener" class="header-whatsapp" aria-label="Message us on WhatsApp">
@@ -1087,7 +1108,7 @@
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
   </div>
   <nav>
-    <a href="#top">The Concierge</a>
+    <a href="concierge.html">The Concierge</a>
     <a href="https://www.staywestfield.uk">Stay Westfield</a>
   </nav>
   <div class="mobile-menu-footer">
@@ -1099,200 +1120,78 @@
 
 <section class="subhero">
   <div class="subhero-media">
-    <img src="images/ullswater_panoramic.jpg" alt="Panoramic view of Ullswater and the surrounding Lake District fells" loading="eager" decoding="async">
+    <img src="images/ullswater_panoramic.jpg" alt="Quad bikes on a fellside track" loading="eager" decoding="async">
   </div>
   <div class="subhero-scrim"></div>
   <div class="subhero-content" style="display:flex; flex-direction:column; gap:0.4rem;">
     <div class="breadcrumb" style="position:static; padding:0 0 1rem;">
-      <a href="#top">Home</a><span>/</span><span aria-current="page">The Concierge</span>
+      <a href="concierge.html">Home</a><span>/</span><span aria-current="page">Land &amp; Speed</span>
     </div>
-    <div class="eyebrow">The Concierge</div>
-    <h1>You have secured your stay, now build your itinerary.</h1>
-    <p>Westfield now builds the days around the stay, not just the stay itself — walking, mountain biking, sailing, water skiing, climbing and everything else the Lake District does well, arranged for our own guests and for anyone else who'd like Ullswater organised properly.</p>
+    <div class="eyebrow">Land &amp; Speed</div>
+    <h1>The valley's reliable answer to a wet afternoon, or simply a change of pace.</h1>
+    <p>Argo cats, quad treks, pony trekking, falconry and clay shooting on the fellside — activities that don't care what the weather's doing, built around whoever's actually in the group.</p>
   </div>
 </section>
 
-<section style="padding:6.5rem 0 5rem;">
+<section style="padding:6rem 0 4.5rem;">
   <div class="wrap">
     <div class="section-intro left reveal">
-      <div class="eyebrow">The other half of the stay</div>
-      <h2 style="font-size:clamp(2rem,4vw,3rem); font-weight:400; margin:0.7rem 0 1.4rem;">Westfield, An Experience.</h2>
+      <div class="eyebrow">When the fells aren't the plan</div>
+      <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin:0.6rem 0 0;">Not every day needs a summit or a paddle.</h2>
     </div>
     <div class="prose reveal">
-      <p><a href="https://www.staywestfield.uk" style="color:var(--amber); text-decoration:underline; text-underline-offset:3px;">Stay Westfield</a> is still where this begins — proper beds, a hot tub, a terrace over Ullswater worth getting up for. If you haven't booked yet, that's the place to start.</p>
-      <p>The Concierge picks up from there. Once your dates are set — with us, or anywhere else on the lake — we build the days around them: walking, biking, sailing, climbing and everything else the Lake District does well, matched to your ability, your appetite for risk, and how many mornings you actually want to be up before eight.</p>
-      <p>Have a look through the modules below, see what a few weeks look like already put together, then tell us what you're after. Every activity is run by the people who do it professionally, day in, day out — our part is knowing who to call, in what order, and around what weather.</p>
+      <p>A working farm activity centre a few miles from Ullswater runs most of what's on this page — quad biking, off-roading, horse riding, archery and clay pigeon shooting, all used to mixed ages and abilities turning up in one booking.</p>
+      <p>A couple of the valley's more unusual specialists sit here too — falconry and alpaca trekking are both genuinely on offer nearby, and worth considering for a group that's done the obvious things already.</p>
     </div>
   </div>
 </section>
 
 <section style="background:var(--stone); padding:5.5rem 0 6rem;">
   <div class="wrap">
-    <div class="section-intro left reveal">
-      <div class="eyebrow">How it works</div>
-      <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin:0.6rem 0 0;">The route we take.</h2>
-    </div>
-    <div class="resource-grid reveal">
-      <div class="resource-card">
-        <div class="r-cat">Step 01</div>
-        <h4>Tell us the shape of the trip</h4>
-        <p>Dates, who's coming, how active you want to be, and anything you'd rather avoid — heights, cold water, early starts.</p>
-      </div>
-      <div class="resource-card">
-        <div class="r-cat">Step 02</div>
-        <h4>We plan the route</h4>
-        <p>A day-by-day itinerary drawn from the Lake District's specialists, timed around weather, crowds, and your own stay.</p>
-      </div>
-      <div class="resource-card">
-        <div class="r-cat">Step 03</div>
-        <h4>The Lake District delivers it</h4>
-        <p>Every activity is run by the people who actually do it for a living — we don't pretend we can teach you to sail.</p>
-      </div>
-      <div class="resource-card">
-        <div class="r-cat">Step 04</div>
-        <h4>You just turn up</h4>
-        <p>Kit sorted, transport arranged where it's needed, one point of contact for the whole week.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="modules" style="padding:6rem 0 6.5rem;">
-  <div class="wrap">
     <div class="rooms-head reveal">
       <div>
-        <div class="eyebrow">Build your week</div>
-        <h2>Choose your terrain.</h2>
+        <div class="eyebrow">Build your afternoon</div>
+        <h2>The options.</h2>
       </div>
-      <p style="max-width:38ch; color:#57646b; font-weight:300; font-size:0.96rem;">Seven ways to fill the days — each one covered in full detail on its own page.</p>
+      <p style="max-width:38ch; color:#57646b; font-weight:300; font-size:0.96rem;">Reliable in any weather, and good for groups that want to try something different together.</p>
     </div>
     <div class="module-grid">
-      <a href="concierge-fells.html" class="module-card" style="text-decoration:none; color:inherit;">
-        <div class="module-num">On the Fells</div>
-        <h4>Walking &amp; Fell Routes</h4>
-        <p>Guided fell walking, the Ullswater Way staged over several days, navigation courses and multi-day treks.</p>
-        <div class="showcase"><span class="showcase-label">Explore in full →</span><p>Grading, routes and example days out.</p></div>
-      </a>
-      <a href="concierge-cycling.html" class="module-card" style="text-decoration:none; color:inherit;">
-        <div class="module-num">On Two Wheels</div>
-        <h4>Mountain Biking &amp; Touring</h4>
-        <p>Whinlatter's red and black trails, quiet road and e-bike touring, and multi-day cycle tours.</p>
-        <div class="showcase"><span class="showcase-label">Explore in full →</span><p>Trail grades and touring options.</p></div>
-      </a>
-      <a href="concierge-water.html" class="module-card" style="text-decoration:none; color:inherit;">
-        <div class="module-num">On the Water</div>
-        <h4>Sailing &amp; Water Sports</h4>
-        <p>Sailing, kayaking, paddleboarding, water skiing, wakeboarding, steamer charters and fly-fishing.</p>
-        <div class="showcase"><span class="showcase-label">Explore in full →</span><p>The richest terrain we cover.</p></div>
-      </a>
-      <a href="concierge-adventure.html" class="module-card" style="text-decoration:none; color:inherit;">
-        <div class="module-num">Vertical &amp; Adventure</div>
-        <h4>Climbing, Ghylls &amp; Via Ferrata</h4>
-        <p>Rock climbing in Borrowdale, ghyll scrambling, and via ferrata at Honister Slate Mine.</p>
-        <div class="showcase"><span class="showcase-label">Explore in full →</span><p>Grading and what to expect.</p></div>
-      </a>
-      <a href="concierge-land.html" class="module-card" style="text-decoration:none; color:inherit;">
-        <div class="module-num">Land &amp; Speed</div>
-        <h4>Off-Road, Horses &amp; Clays</h4>
-        <p>Quad biking, horse riding, archery, clay shooting, falconry and alpaca trekking.</p>
-        <div class="showcase"><span class="showcase-label">Explore in full →</span><p>Good for any weather, any day.</p></div>
-      </a>
-      <a href="concierge-wellness.html" class="module-card" style="text-decoration:none; color:inherit;">
-        <div class="module-num">Slow &amp; Restorative</div>
-        <h4>Wellness &amp; Slow Days</h4>
-        <p>Fell yoga, wild swimming, a private chef, dark-sky nights and local tastings.</p>
-        <div class="showcase"><span class="showcase-label">Explore in full →</span><p>Not every day needs a summit.</p></div>
-      </a>
-      <a href="concierge-family.html" class="module-card" style="text-decoration:none; color:inherit;">
-        <div class="module-num">Family &amp; Groups</div>
-        <h4>Multi-Generational Trips</h4>
-        <p>Junior adventure days, milestones, hen &amp; stag weekends, and corporate away-days.</p>
-        <div class="showcase"><span class="showcase-label">Explore in full →</span><p>One booking, several good days.</p></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="itineraries" style="background:var(--stone); padding:5.5rem 0 6rem;">
-  <div class="wrap">
-    <div class="rooms-head reveal">
-      <div>
-        <div class="eyebrow">Put together already</div>
-        <h2>Showcase itineraries.</h2>
+      <div class="module-card">
+        <div class="module-num">Land · 01</div>
+        <h4>Off-road &amp; quad biking</h4>
+        <p>Escorted treks across working farmland, with argo cat rides for those who'd rather not drive themselves.</p>
+        <div class="showcase"><span class="showcase-label">Example showcase</span><p>Quad trek &amp; clays — a 40-minute escorted ride followed by 25 clays with an instructor.</p></div>
       </div>
-      <p style="max-width:40ch; color:#57646b; font-weight:300; font-size:0.96rem;">Four ways we've already put these modules together, full day-by-day breakdowns on their own page.</p>
-    </div>
-    <div class="resource-grid reveal">
-
-      <a href="concierge-itineraries.html#adventurers-weekend" class="resource-card" style="text-decoration:none; color:inherit;">
-        <div class="itin-meta"><h4 style="margin:0;">The Adventurer's Weekend</h4><span class="itin-dur">2 nights</span></div>
-        <span class="itin-for">For active couples and friend groups who want variety over pace.</span>
-        <p style="font-size:0.86rem; color:var(--amber); font-weight:500;">See the full day-by-day →</p>
-      </a>
-
-      <a href="concierge-itineraries.html#water-lovers-weekend" class="resource-card" style="text-decoration:none; color:inherit;">
-        <div class="itin-meta"><h4 style="margin:0;">The Water Lover's Long Weekend</h4><span class="itin-dur">3 nights</span></div>
-        <span class="itin-for">For guests who'd rather be on the lake than beside it.</span>
-        <p style="font-size:0.86rem; color:var(--amber); font-weight:500;">See the full day-by-day →</p>
-      </a>
-
-      <a href="concierge-itineraries.html#fell-walkers-retreat" class="resource-card" style="text-decoration:none; color:inherit;">
-        <div class="itin-meta"><h4 style="margin:0;">The Fell Walker's Retreat</h4><span class="itin-dur">4 nights</span></div>
-        <span class="itin-for">For serious walkers, or anyone here simply for the miles.</span>
-        <p style="font-size:0.86rem; color:var(--amber); font-weight:500;">See the full day-by-day →</p>
-      </a>
-
-      <a href="concierge-itineraries.html#family-adventure-week" class="resource-card" style="text-decoration:none; color:inherit;">
-        <div class="itin-meta"><h4 style="margin:0;">The Family Adventure Week</h4><span class="itin-dur">7 nights</span></div>
-        <span class="itin-for">For multi-generational groups who all want something different.</span>
-        <p style="font-size:0.86rem; color:var(--amber); font-weight:500;">See the full day-by-day →</p>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="wrap">
-    <div class="eyebrow" style="justify-content:center;">Staying elsewhere on Ullswater?</div>
-    <h2>Not staying with us? The concierge still travels.</h2>
-    <p>Westfield began as a place to stay. It's become the number people call before they've even booked anywhere. Whether you're in one of our own rooms, a cottage along the lakeshore, or a tent further into the Lake District, the same concierge can build your week.</p>
-    <a href="#enquire" class="btn">Enquire without booking a stay →</a>
-  </div>
-</section>
-
-<section style="padding:6rem 0 6.5rem;">
-  <div class="wrap">
-    <div class="rooms-head reveal">
-      <div>
-        <div class="eyebrow">The Lake District, mapped</div>
-        <h2>What's already on our doorstep.</h2>
+      <div class="module-card">
+        <div class="module-num">Land · 02</div>
+        <h4>Horse &amp; pony riding</h4>
+        <p>Lessons and fellside treks for all abilities, from first-timers to confident riders.</p>
+        <div class="showcase"><span class="showcase-label">Example showcase</span><p>Family pony trek — a mixed-age lesson on the fellside, led by the yard's own instructors.</p></div>
       </div>
-      <p style="max-width:40ch; color:#57646b; font-weight:300; font-size:0.96rem;">A working network of outdoor specialists — some on the lakeshore, others a short drive through Keswick or up towards Blencathra.</p>
-    </div>
-
-    <ul class="link-list reveal">
-      <li class="op">
-        <div class="op-row"><span class="op-name">Glenridding Sailing Centre</span><span class="op-tag">Sailing · kayaking</span></div>
-        <p class="op-desc">RYA tuition and boat hire from a lakeshore base at the southern end of Ullswater.</p>
-      </li>
-      <li class="op">
-        <div class="op-row"><span class="op-name">Whinlatter Forest Park</span><span class="op-tag">Mountain biking</span></div>
-        <p class="op-desc">England's only true mountain forest, with waymarked red and black trails and bike hire on site.</p>
-      </li>
-      <li class="op">
-        <div class="op-row"><span class="op-name">Honister Slate Mine</span><span class="op-tag">Via ferrata</span></div>
-        <p class="op-desc">Cabled via ferrata routes across an old slate quarry face at the top of Honister Pass.</p>
-      </li>
-      <li class="op">
-        <div class="op-row"><span class="op-name">Rookin House Activity Centre</span><span class="op-tag">Land &amp; speed</span></div>
-        <p class="op-desc">Quad biking, off-roading, horse riding, archery and clay pigeon shooting, a few miles from Ullswater.</p>
-      </li>
-    </ul>
-
-    <div class="prose reveal" style="margin-top:2.4rem;">
-      <p>Plus the wake and ski operators at Pooley Bridge, the heritage steamers, Keswick's climbing and ghyll specialists, and a handful of more unusual finds — falconry, alpaca trekking, dark-sky nights and local tastings among them.</p>
-      <p><a href="concierge-network.html" style="color:var(--amber); text-decoration:underline; text-underline-offset:3px;">See the full valley network →</a></p>
+      <div class="module-card">
+        <div class="module-num">Land · 03</div>
+        <h4>Archery &amp; clay pigeon shooting</h4>
+        <p>Indoor and outdoor sessions, GNAS-qualified tuition, suitable from complete beginners upward.</p>
+        <div class="showcase"><span class="showcase-label">Example showcase</span><p>Archery hour — a relaxed introduction, good as a standalone or paired with another activity.</p></div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">Land · 04</div>
+        <h4>Falconry</h4>
+        <p>A hands-on introduction to birds of prey, from a hawk walk to a full falconry experience day.</p>
+        <div class="showcase"><span class="showcase-label">Example showcase</span><p>Hawk walk — an hour flying a Harris hawk through the woods, suitable for most ages.</p></div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">Land · 05</div>
+        <h4>Alpaca trekking</h4>
+        <p>A slow, gently absurd walk with a halter-led alpaca — surprisingly popular with groups who've done the adrenaline activities already.</p>
+        <div class="showcase"><span class="showcase-label">Example showcase</span><p>Alpaca walk &amp; picnic — an hour's gentle walk finishing with tea and the alpacas nearby.</p></div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">Land · 06</div>
+        <h4>Fellside golf</h4>
+        <p>A round on one of the area's fell-backed courses, for a quieter day that still gets everyone outdoors.</p>
+        <div class="showcase"><span class="showcase-label">Example showcase</span><p>Nine holes with a view — a relaxed round, clubs available to hire.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1301,70 +1200,49 @@
   <div class="wrap">
     <div class="section-intro left reveal">
       <div class="eyebrow">A few questions</div>
-      <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin:0.6rem 0 2rem;">Before you enquire.</h2>
+      <h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:400; margin:0.6rem 0 2rem;">Land &amp; speed, specifically.</h2>
     </div>
     <div class="faq reveal">
       <details>
-        <summary>Do we have to stay at Westfield to use the concierge?</summary>
-        <p>No. The concierge service is open to anyone staying anywhere on Ullswater — our own guests just get it as standard.</p>
+        <summary>Is there a minimum age for quad biking or off-roading?</summary>
+        <p>Yes, usually around 12 for solo quad riding, with younger children able to ride passenger in an argo cat instead — we confirm exact ages against your group when booking.</p>
       </details>
       <details>
-        <summary>How far in advance should we book activities?</summary>
-        <p>As soon as your dates are fixed, ideally. Popular sessions — via ferrata, sailing tuition, ghyll scrambling — get booked up in peak season, so the earlier we know your plans the more choice we have.</p>
+        <summary>Does the weather affect any of these?</summary>
+        <p>Barely — that's rather the point of this page. Falconry and clay shooting do pause in genuinely severe conditions, but everything here runs in typical Lake District weather.</p>
       </details>
       <details>
-        <summary>What happens if the weather turns?</summary>
-        <p>We build a wet-weather alternative into every itinerary from the start, and stay in touch with each operator on the day. Nobody's left standing in a field wondering what's happening.</p>
+        <summary>Can this be booked as a rainy-day backup at short notice?</summary>
+        <p>Often, yes, though popular slots do get booked up — worth telling us it's a possibility when we first plan your week, not just on the morning it rains.</p>
       </details>
-      <details>
-        <summary>Can you organise activities for large or mixed-ability groups?</summary>
-        <p>Yes — it's one of the things we spend the most time on. Most of the Lake District's operators are used to running sessions for a wide age and ability range within a single booking.</p>
-      </details>
-      <details>
-        <summary>Is there an extra cost for the concierge service itself?</summary>
-        <p>Planning your itinerary is free. You pay each activity operator directly at their own rates — we don't mark anything up.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section class="enquire" id="enquire">
-  <div class="wrap grid">
-    <div class="enquire-copy reveal">
-      <div class="eyebrow">Start planning</div>
-      <h2>Tell us about the trip you want.</h2>
-      <p>A few details is all we need to start drafting a route. No obligation to book, and no obligation to stay with us either.</p>
-    </div>
-    <div class="enquiry-form reveal">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf_ZBxFKktnwSZTi74w7tUV72IfasmXBU2f80G2DctZawyWmQ/viewform?embedded=true" width="100%" height="1300" frameborder="0" marginheight="0" marginwidth="0" title="Build Your Ideal Trip — Westfield concierge enquiry form" loading="lazy">Loading…</iframe>
     </div>
   </div>
 </section>
 
 <section class="explore-more">
   <div class="wrap">
-    <div class="eyebrow reveal">Read more</div>
-    <h2 class="reveal" style="font-size:clamp(1.7rem,3vw,2.2rem); font-weight:400; margin:0.6rem 0 0;">Explore the rest of the Lake District.</h2>
+    <div class="eyebrow reveal">Keep exploring</div>
+    <h2 class="reveal" style="font-size:clamp(1.7rem,3vw,2.2rem); font-weight:400; margin:0.6rem 0 0;">Other ways to build your week.</h2>
     <div class="explore-grid reveal">
-      <a href="https://www.staywestfield.uk/ullswater.html" class="explore-card">
-        <div class="eyebrow">On the lake</div>
-        <h3>Ullswater</h3>
-        <p>Sailing, paddleboarding, kayaking and the steamer — the lake itself, in detail.</p>
+      <a href="concierge-cycling.html" class="explore-card">
+        <div class="eyebrow">On two wheels</div>
+        <h3>Mountain Biking &amp; Touring</h3>
+        <p>Whinlatter's trails, and quiet road and e-bike touring.</p>
       </a>
-      <a href="https://www.staywestfield.uk/walking.html" class="explore-card">
-        <div class="eyebrow">On foot</div>
-        <h3>Walking</h3>
-        <p>The Ullswater Way and the fells above it, from lakeshore strolls to Striding Edge.</p>
+      <a href="concierge-family.html" class="explore-card">
+        <div class="eyebrow">Family &amp; groups</div>
+        <h3>Multi-Generational Trips</h3>
+        <p>Junior adventure days, milestones and corporate away-days.</p>
       </a>
-      <a href="https://www.staywestfield.uk/things-to-do.html" class="explore-card">
-        <div class="eyebrow">Beyond the cottage</div>
-        <h3>Things to Do</h3>
-        <p>The wider list of attractions and days out around Watermillock and Ullswater.</p>
+      <a href="concierge-itineraries.html" class="explore-card">
+        <div class="eyebrow">Already planned</div>
+        <h3>Showcase Itineraries</h3>
+        <p>Full day-by-day plans built from these modules, ready to adjust.</p>
       </a>
-      <a href="https://www.staywestfield.uk/food-drink.html" class="explore-card">
-        <div class="eyebrow">After the activity</div>
-        <h3>Food &amp; Drink</h3>
-        <p>Where to eat locally, from The Brackenrigg Inn to Another Place.</p>
+      <a href="concierge.html#enquire" class="explore-card">
+        <div class="eyebrow">Ready when you are</div>
+        <h3>Start Planning</h3>
+        <p>Tell us about the trip you want and we'll build the route.</p>
       </a>
     </div>
   </div>
@@ -1373,7 +1251,7 @@
 <footer id="siteFooter">
   <nav class="footer-sitemap" aria-label="Site pages">
     <div class="wrap">
-      <a href="#top">The Concierge</a>
+      <a href="concierge.html">The Concierge</a>
       <a href="https://www.staywestfield.uk">Stay Westfield</a>
     </div>
   </nav>
@@ -1417,6 +1295,7 @@
 </div>
 
 
+
 <div class="newsletter-box" id="newsletterBox">
   <button class="newsletter-close" id="newsletterClose" aria-label="Close">&times;</button>
   <div class="eyebrow">Stay in touch</div>
@@ -1428,6 +1307,7 @@
   </form>
   <p class="newsletter-success">Thanks — you're on the list.</p>
 </div>
+
 
 <a href="https://wa.me/447554334030?text=Hi%20I%20would%20like%20to%20connect%20regarding%20Westfield%20On%20Ullswater" target="_blank" rel="noopener" class="chat-bubble" id="chatBubble" aria-label="Chat with us on WhatsApp">
   <span class="chat-greeting">Hi, I'm your host for Westfield should you need any assistance today</span>
@@ -1459,6 +1339,7 @@
     <script>InnStyle('staywestfield');</script>
   </div>
 </div>
+
 
 <script>
   // Google Analytics is only loaded after the user consents — see the
